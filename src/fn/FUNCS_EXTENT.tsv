@@ -1,0 +1,6 @@
+#addr	maxaddr	notes
+00544c10	00544f80	Full locale-info body (881 bytes). 00544d57 is a mid-byte false start, not a function.
+00544810	0054487b	Includes internal jmp 00544843 / xor-else 00544845 / continuation 00544847 (108 bytes). .data 0x544843/0x544847 are "CHT" / "RIGHT" string bytes, not pointers.
+00539f23	00539f3f	Includes mid-entry 00539f29 (called from already-fn 00539eb0; standalone bodyref).
+0053a05f	0053a07b	Includes mid-entry 0053a068 (called from already-fn 00539ff0; standalone bodyref).
+0053eb6f	0053ebc5	Includes mid-entry 0053eb78 (called from already-fn 0053ea80; standalone bodyref).

@@ -1,0 +1,98 @@
+/* Rebuilt from lomse.exe FUN_0044bbc0 @ 0x0044bbc0 (488 bytes, __thiscall).
+ * Source: Ghidra 12.2 decompilation, cleaned by tools/gen.py. Behaviour-match target, not byte-match. */
+#include "lom.h"
+
+#define DAT_005aa12c (*(int *)0x005aa12c)
+#define FUN_0044b660 ((undefined4 (__thiscall *)(void *, int *))0x0044b660)
+#define FUN_0044ba50 ((undefined4 (__thiscall *)(void *, undefined4 *, int))0x0044ba50)
+#define FUN_00526bf0 ((undefined4 (__fastcall *)(int))0x00526bf0)
+#define FUN_00526c10 ((undefined4 (__stdcall *)(void))0x00526c10)
+#define FUN_00526c20 ((undefined4 (__thiscall *)(void *, int *))0x00526c20)
+#define FUN_005397f0 ((uint (__cdecl *)(char *, uint, uint, int *))0x005397f0)
+
+#define LOM_SELF_0044bbc0 1
+undefined4 __thiscall rb_0044bbc0(void *this,int *param_1)
+
+{
+  uint uVar1;
+  int iVar2;
+  undefined4 *puVar3;
+  char *pcVar4;
+  int *piVar5;
+  int iVar6;
+  int local_34;
+  void *local_30;
+  undefined4 local_2c [8];
+
+  local_30 = this;
+  FUN_00526bf0((int)local_2c);
+  iVar6 = 0;
+  FUN_0044b660(this,param_1);
+  if (DAT_005aa12c < 0x55) {
+    pcVar4 = (char *)((int)this + 0x14);
+    do {
+      uVar1 = FUN_005397f0(pcVar4,4,1,param_1);
+      if ((uVar1 != 1) || (uVar1 = FUN_005397f0((char *)&local_34,4,1,param_1), uVar1 != 1)) {
+LAB_0044bd93:
+        FUN_00526c10();
+        return 0;
+      }
+      for (; local_34 != 0; local_34 = local_34 + -1) {
+        iVar2 = FUN_00526c20(local_2c,param_1);
+        if (iVar2 == 0) goto LAB_0044bd93;
+        FUN_0044ba50(this,local_2c,iVar6);
+      }
+      iVar6 = iVar6 + 1;
+      pcVar4 = pcVar4 + 4;
+    } while (iVar6 < 6);
+    iVar6 = 0;
+    piVar5 = (int *)((int)this + 0x14);
+    do {
+      if (*piVar5 < 1) break;
+      iVar6 = iVar6 + 1;
+      piVar5 = piVar5 + 1;
+    } while (iVar6 < 6);
+    *(int *)((int)this + 0x44) = iVar6;
+    local_34 = 0;
+  }
+  else {
+    piVar5 = (int *)((int)this + 0x44);
+    uVar1 = FUN_005397f0((char *)piVar5,4,1,param_1);
+    if (uVar1 != 1) {
+      FUN_00526c10();
+      return 0;
+    }
+    iVar2 = 0;
+    iVar6 = local_34;
+    if (0 < *piVar5) {
+      pcVar4 = (char *)((int)local_30 + 0x14);
+      do {
+        uVar1 = FUN_005397f0(pcVar4,4,1,param_1);
+        if ((uVar1 != 1) || (uVar1 = FUN_005397f0((char *)&local_34,4,1,param_1), uVar1 != 1))
+        goto LAB_0044bd93;
+        for (; local_34 != 0; local_34 = local_34 + -1) {
+          iVar6 = FUN_00526c20(local_2c,param_1);
+          if (iVar6 == 0) goto LAB_0044bd93;
+          FUN_0044ba50(local_30,local_2c,iVar2);
+        }
+        iVar2 = iVar2 + 1;
+        pcVar4 = pcVar4 + 4;
+        iVar6 = 0;
+      } while (iVar2 < *piVar5);
+    }
+    local_34 = iVar6;
+    iVar6 = *piVar5;
+    if (iVar6 < 6) {
+      iVar2 = 6 - iVar6;
+      puVar3 = (undefined4 *)((int)local_30 + iVar6 * 4 + 0x2c);
+      do {
+        puVar3[-6] = 0;
+        *puVar3 = 0;
+        puVar3 = puVar3 + 1;
+        iVar2 = iVar2 + -1;
+      } while (iVar2 != 0);
+    }
+  }
+  FUN_00526c10();
+  return 1;
+}

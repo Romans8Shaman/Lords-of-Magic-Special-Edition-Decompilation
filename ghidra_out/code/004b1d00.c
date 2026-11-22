@@ -1,0 +1,23 @@
+
+void __thiscall FUN_004b1d00(void *this,undefined1 param_1,char param_2,int param_3)
+
+{
+  char cVar1;
+  char *pcVar2;
+  char cVar3;
+  
+  pcVar2 = FUN_004b1db0(this,param_1);
+  cVar1 = pcVar2[2];
+  pcVar2[2] = param_2;
+  cVar3 = *pcVar2;
+  if (param_2 <= *pcVar2) {
+    cVar3 = param_2;
+  }
+  *pcVar2 = cVar3;
+  if ((param_2 != cVar1) && (param_3 != 0)) {
+    FUN_004b2310(0x5aa12c);
+  }
+  return;
+}
+
+

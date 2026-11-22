@@ -1,0 +1,37 @@
+/* Rebuilt from lomse.exe FUN_00518b20 @ 0x00518b20 (118 bytes, __thiscall).
+ * Source: Ghidra 12.2 decompilation, cleaned by tools/gen.py. Behaviour-match target, not byte-match. */
+#include "lom.h"
+
+
+#define LOM_SELF_00518b20 1
+int __thiscall
+rb_00518b20(void *this,undefined4 param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4)
+
+{
+  int iVar1;
+  int iVar2;
+  int iVar3;
+  uchar _fr[0x10] __attribute__((aligned(8))); /* stack frame: locals at Ghidra offsets */
+  typedef int _t_local_4;
+#define local_4 (*(_t_local_4 *)(_fr + 0x4))
+  
+  iVar2 = 0;
+  local_4 = 0;
+  if (0 < *(int *)((int)this + 0x202c4)) {
+    do {
+      iVar3 = 0;
+      if (0 < *(int *)((int)this + 0x202c0)) {
+        do {
+          iVar1 = ((undefined4 (__thiscall *)(__typeof__(this), __typeof__(iVar3), __typeof__(iVar2), __typeof__(param_1), __typeof__(param_2), __typeof__(param_3), __typeof__(param_4)))(**(code **)((int)this + 0x220)))(this,iVar3,iVar2,param_1,param_2,param_3,param_4);
+          if (iVar1 != -1) {
+            local_4 = local_4 + 1;
+          }
+          iVar3 = iVar3 + 1;
+        } while (iVar3 < *(int *)((int)this + 0x202c0));
+      }
+      iVar2 = iVar2 + 1;
+    } while (iVar2 < *(int *)((int)this + 0x202c4));
+  }
+  return local_4;
+#undef local_4
+}

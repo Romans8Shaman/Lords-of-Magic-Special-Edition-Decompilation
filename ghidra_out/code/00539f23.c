@@ -1,0 +1,14 @@
+
+void FUN_00539f23(void)
+
+{
+  int unaff_EBP;
+  
+  if (*(int *)(unaff_EBP + -0x1c) == 0) {
+    FUN_00539f60(*(undefined4 *)(unaff_EBP + 8),*(undefined4 *)(unaff_EBP + 0xc),
+                 *(int *)(unaff_EBP + 0x10),*(undefined **)(unaff_EBP + 0x14));
+  }
+  return;
+}
+
+

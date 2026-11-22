@@ -1,0 +1,37 @@
+/* Rebuilt from lomse.exe FUN_004a52e0 @ 0x004a52e0 (173 bytes, __thiscall).
+ * Source: Ghidra 12.2 decompilation, cleaned by tools/gen.py. Behaviour-match target, not byte-match. */
+#include "lom.h"
+
+#define DAT_005aa12c (*(undefined4 *)0x005aa12c)
+#define FUN_00487730 ((undefined4 (__thiscall *)(void *, undefined4 *))0x00487730)
+#define FUN_004a4f20 ((undefined4 (__thiscall *)(void *, int, int, int))0x004a4f20)
+#define FUN_005397f0 ((uint (__cdecl *)(char *, uint, uint, int *))0x005397f0)
+
+#define LOM_SELF_004a52e0 1
+undefined4 __thiscall rb_004a52e0(void *this, int *volatile param_1, int volatile param_2)
+
+{
+  int *piVar1;
+  int iVar2;
+  
+  piVar1 = param_1;
+  if (param_1 == (int *)0x0) {
+    return 0;
+  }
+  FUN_005397f0((char *)((int)this + 0x5c),4,1,param_1);
+  FUN_005397f0((char *)((int)this + 0x60),4,1,piVar1);
+  iVar2 = FUN_004a4f20(this,*(int *)((int)this + 0x5c),*(int *)((int)this + 0x60),param_2);
+  if (iVar2 == 0) {
+    return 0;
+  }
+  FUN_005397f0((char *)&param_1,4,1,piVar1);
+  iVar2 = 0;
+  if (0 < *(int *)((int)this + 0x58)) {
+    do {
+      FUN_005397f0((char *)(*(int *)((int)this + 0x54) + iVar2 * 8),(int)param_1 << 6,1,piVar1);
+      FUN_00487730(&DAT_005aa12c,piVar1);
+      iVar2 = iVar2 + 0x40;
+    } while (iVar2 < *(int *)((int)this + 0x58));
+  }
+  return 1;
+}

@@ -1,0 +1,211 @@
+iat_va	dll	symbol	name	ordinal	thunk_va
+0054d040	KERNEL32.dll	GetComputerNameA	GetComputerNameA		
+0054d044	KERNEL32.dll	GetLastError	GetLastError		
+0054d048	KERNEL32.dll	GetModuleFileNameA	GetModuleFileNameA		
+0054d04c	KERNEL32.dll	GlobalFree	GlobalFree		
+0054d050	KERNEL32.dll	SetEvent	SetEvent		
+0054d054	KERNEL32.dll	CloseHandle	CloseHandle		
+0054d058	KERNEL32.dll	GlobalUnlock	GlobalUnlock		
+0054d05c	KERNEL32.dll	GlobalHandle	GlobalHandle		
+0054d060	KERNEL32.dll	MapViewOfFile	MapViewOfFile		
+0054d064	KERNEL32.dll	GetTempPathA	GetTempPathA		
+0054d068	KERNEL32.dll	CreateFileMappingA	CreateFileMappingA		
+0054d06c	KERNEL32.dll	CreateFileA	CreateFileA		
+0054d070	KERNEL32.dll	InterlockedExchange	InterlockedExchange		
+0054d074	KERNEL32.dll	LocalFree	LocalFree		
+0054d078	KERNEL32.dll	FormatMessageA	FormatMessageA		
+0054d07c	KERNEL32.dll	GetDiskFreeSpaceA	GetDiskFreeSpaceA		
+0054d080	KERNEL32.dll	UnmapViewOfFile	UnmapViewOfFile		
+0054d084	KERNEL32.dll	GetFileSize	GetFileSize		
+0054d088	KERNEL32.dll	ResetEvent	ResetEvent		
+0054d08c	KERNEL32.dll	CreateThread	CreateThread		
+0054d090	KERNEL32.dll	FreeLibrary	FreeLibrary		
+0054d094	KERNEL32.dll	GetProcAddress	GetProcAddress		
+0054d098	KERNEL32.dll	GetModuleHandleA	GetModuleHandleA		
+0054d09c	KERNEL32.dll	TerminateThread	TerminateThread		
+0054d0a0	KERNEL32.dll	GetExitCodeThread	GetExitCodeThread		
+0054d0a4	KERNEL32.dll	DeleteFileA	DeleteFileA		
+0054d0a8	KERNEL32.dll	VirtualFree	VirtualFree		
+0054d0ac	KERNEL32.dll	VirtualAlloc	VirtualAlloc		
+0054d0b0	KERNEL32.dll	GetDriveTypeA	GetDriveTypeA		
+0054d0b4	KERNEL32.dll	GetTempFileNameA	GetTempFileNameA		
+0054d0b8	KERNEL32.dll	GlobalMemoryStatus	GlobalMemoryStatus		
+0054d0bc	KERNEL32.dll	CreateDirectoryA	CreateDirectoryA		
+0054d0c0	KERNEL32.dll	DebugBreak	DebugBreak		
+0054d0c4	KERNEL32.dll	WaitForSingleObject	WaitForSingleObject		
+0054d0c8	KERNEL32.dll	GlobalAlloc	GlobalAlloc		
+0054d0cc	KERNEL32.dll	GlobalLock	GlobalLock		
+0054d0d0	KERNEL32.dll	Sleep	Sleep		
+0054d0d4	KERNEL32.dll	CreateEventA	CreateEventA		
+0054d0d8	KERNEL32.dll	EnterCriticalSection	EnterCriticalSection		
+0054d0dc	KERNEL32.dll	LeaveCriticalSection	LeaveCriticalSection		
+0054d0e0	KERNEL32.dll	DeleteCriticalSection	DeleteCriticalSection		
+0054d0e4	KERNEL32.dll	InitializeCriticalSection	InitializeCriticalSection		
+0054d0e8	KERNEL32.dll	GetTickCount	GetTickCount		
+0054d0ec	KERNEL32.dll	LoadLibraryA	LoadLibraryA		
+0054d0f0	KERNEL32.dll	CompareFileTime	CompareFileTime		
+0054d0f4	KERNEL32.dll	GetFileTime	GetFileTime		
+0054d0f8	KERNEL32.dll	OutputDebugStringA	OutputDebugStringA		
+0054d0fc	KERNEL32.dll	WriteFile	WriteFile		
+0054d100	KERNEL32.dll	CompareStringA	CompareStringA		
+0054d104	KERNEL32.dll	GetLocaleInfoW	GetLocaleInfoW		
+0054d108	KERNEL32.dll	GetStringTypeW	GetStringTypeW		
+0054d10c	KERNEL32.dll	GetStringTypeA	GetStringTypeA		
+0054d110	KERNEL32.dll	GetLocaleInfoA	GetLocaleInfoA		
+0054d114	KERNEL32.dll	IsBadCodePtr	IsBadCodePtr		
+0054d118	KERNEL32.dll	IsBadWritePtr	IsBadWritePtr		
+0054d11c	KERNEL32.dll	IsBadReadPtr	IsBadReadPtr		
+0054d120	KERNEL32.dll	SetUnhandledExceptionFilter	SetUnhandledExceptionFilter		
+0054d124	KERNEL32.dll	FlushFileBuffers	FlushFileBuffers		
+0054d128	KERNEL32.dll	GetEnvironmentStringsW	GetEnvironmentStringsW		
+0054d12c	KERNEL32.dll	GetEnvironmentStrings	GetEnvironmentStrings		
+0054d130	KERNEL32.dll	FreeEnvironmentStringsW	FreeEnvironmentStringsW		
+0054d134	KERNEL32.dll	FreeEnvironmentStringsA	FreeEnvironmentStringsA		
+0054d138	KERNEL32.dll	SetEndOfFile	SetEndOfFile		
+0054d13c	KERNEL32.dll	SetStdHandle	SetStdHandle		
+0054d140	KERNEL32.dll	HeapCreate	HeapCreate		
+0054d144	KERNEL32.dll	HeapDestroy	HeapDestroy		
+0054d148	KERNEL32.dll	GetCurrentProcessId	GetCurrentProcessId		00542040
+0054d14c	KERNEL32.dll	GetStdHandle	GetStdHandle		
+0054d150	KERNEL32.dll	SetHandleCount	SetHandleCount		
+0054d154	KERNEL32.dll	UnhandledExceptionFilter	UnhandledExceptionFilter		
+0054d158	KERNEL32.dll	GetOEMCP	GetOEMCP		
+0054d15c	KERNEL32.dll	GetACP	GetACP		
+0054d160	KERNEL32.dll	GetCPInfo	GetCPInfo		
+0054d164	KERNEL32.dll	RaiseException	RaiseException		
+0054d168	KERNEL32.dll	LCMapStringW	LCMapStringW		
+0054d16c	KERNEL32.dll	LCMapStringA	LCMapStringA		
+0054d170	KERNEL32.dll	WideCharToMultiByte	WideCharToMultiByte		
+0054d174	KERNEL32.dll	MultiByteToWideChar	MultiByteToWideChar		
+0054d178	KERNEL32.dll	SetFilePointer	SetFilePointer		
+0054d17c	KERNEL32.dll	HeapSize	HeapSize		
+0054d180	KERNEL32.dll	GetSystemTime	GetSystemTime		
+0054d184	KERNEL32.dll	GetTimeZoneInformation	GetTimeZoneInformation		
+0054d188	KERNEL32.dll	HeapReAlloc	HeapReAlloc		
+0054d18c	KERNEL32.dll	GetCurrentProcess	GetCurrentProcess		
+0054d190	KERNEL32.dll	TerminateProcess	TerminateProcess		
+0054d194	KERNEL32.dll	TlsGetValue	TlsGetValue		
+0054d198	KERNEL32.dll	SetLastError	SetLastError		
+0054d19c	KERNEL32.dll	TlsAlloc	TlsAlloc		
+0054d1a0	KERNEL32.dll	GetCurrentThreadId	GetCurrentThreadId		
+0054d1a4	KERNEL32.dll	CompareStringW	CompareStringW		
+0054d1a8	KERNEL32.dll	ReadFile	ReadFile		
+0054d1ac	KERNEL32.dll	GetLocalTime	GetLocalTime		
+0054d1b0	KERNEL32.dll	ExitProcess	ExitProcess		
+0054d1b4	KERNEL32.dll	GetVersion	GetVersion		
+0054d1b8	KERNEL32.dll	GetCommandLineA	GetCommandLineA		
+0054d1bc	KERNEL32.dll	GetStartupInfoA	GetStartupInfoA		
+0054d1c0	KERNEL32.dll	HeapAlloc	HeapAlloc		
+0054d1c4	KERNEL32.dll	GetFileType	GetFileType		
+0054d1c8	KERNEL32.dll	FileTimeToSystemTime	FileTimeToSystemTime		
+0054d1cc	KERNEL32.dll	FileTimeToLocalFileTime	FileTimeToLocalFileTime		
+0054d1d0	KERNEL32.dll	FindFirstFileA	FindFirstFileA		
+0054d1d4	KERNEL32.dll	ExitThread	ExitThread		
+0054d1d8	KERNEL32.dll	FindNextFileA	FindNextFileA		
+0054d1dc	KERNEL32.dll	ResumeThread	ResumeThread		
+0054d1e0	KERNEL32.dll	InterlockedIncrement	InterlockedIncrement		
+0054d1e4	KERNEL32.dll	TlsSetValue	TlsSetValue		
+0054d1e8	KERNEL32.dll	RtlUnwind	RtlUnwind		00548e00
+0054d1ec	KERNEL32.dll	SetEnvironmentVariableA	SetEnvironmentVariableA		
+0054d1f0	KERNEL32.dll	InterlockedDecrement	InterlockedDecrement		
+0054d1f4	KERNEL32.dll	GetCurrentDirectoryA	GetCurrentDirectoryA		
+0054d1f8	KERNEL32.dll	SetCurrentDirectoryA	SetCurrentDirectoryA		
+0054d1fc	KERNEL32.dll	GetFullPathNameA	GetFullPathNameA		
+0054d200	KERNEL32.dll	HeapFree	HeapFree		
+0054d27c	USER32.dll	GetDC	GetDC		
+0054d280	USER32.dll	DestroyWindow	DestroyWindow		
+0054d284	USER32.dll	PeekMessageA	PeekMessageA		
+0054d288	USER32.dll	DrawTextA	DrawTextA		
+0054d28c	USER32.dll	MessageBoxA	MessageBoxA		
+0054d290	USER32.dll	GetCursorPos	GetCursorPos		
+0054d294	USER32.dll	MessageBeep	MessageBeep		
+0054d298	USER32.dll	PtInRect	PtInRect		
+0054d29c	USER32.dll	PostQuitMessage	PostQuitMessage		
+0054d2a0	USER32.dll	ShowCursor	ShowCursor		
+0054d2a4	USER32.dll	SetCursorPos	SetCursorPos		
+0054d2a8	USER32.dll	GetCursor	GetCursor		
+0054d2ac	USER32.dll	SetDlgItemInt	SetDlgItemInt		
+0054d2b0	USER32.dll	PostMessageA	PostMessageA		
+0054d2b4	USER32.dll	GetDlgItemTextA	GetDlgItemTextA		
+0054d2b8	USER32.dll	SendDlgItemMessageA	SendDlgItemMessageA		
+0054d2bc	USER32.dll	RedrawWindow	RedrawWindow		
+0054d2c0	USER32.dll	ShowWindow	ShowWindow		
+0054d2c4	USER32.dll	IsWindow	IsWindow		
+0054d2c8	USER32.dll	SendMessageA	SendMessageA		
+0054d2cc	USER32.dll	IsWindowVisible	IsWindowVisible		
+0054d2d0	USER32.dll	CreateDialogParamA	CreateDialogParamA		
+0054d2d4	USER32.dll	SetCursor	SetCursor		
+0054d2d8	USER32.dll	LoadCursorA	LoadCursorA		
+0054d2dc	USER32.dll	ReleaseDC	ReleaseDC		
+0054d2e0	USER32.dll	LoadAcceleratorsA	LoadAcceleratorsA		
+0054d2e4	USER32.dll	UpdateWindow	UpdateWindow		
+0054d2e8	USER32.dll	ReleaseCapture	ReleaseCapture		
+0054d2ec	USER32.dll	SetCapture	SetCapture		
+0054d2f0	USER32.dll	GetAsyncKeyState	GetAsyncKeyState		
+0054d2f4	USER32.dll	DefWindowProcA	DefWindowProcA		
+0054d2f8	USER32.dll	TranslateAcceleratorA	TranslateAcceleratorA		
+0054d2fc	USER32.dll	IsDialogMessageA	IsDialogMessageA		
+0054d300	USER32.dll	LoadIconA	LoadIconA		
+0054d304	USER32.dll	RegisterClassA	RegisterClassA		
+0054d308	USER32.dll	GetSystemMetrics	GetSystemMetrics		
+0054d30c	USER32.dll	CreateWindowExA	CreateWindowExA		
+0054d310	USER32.dll	SetForegroundWindow	SetForegroundWindow		
+0054d314	USER32.dll	GetMessageA	GetMessageA		
+0054d318	USER32.dll	ValidateRect	ValidateRect		
+0054d31c	USER32.dll	TranslateMessage	TranslateMessage		
+0054d320	USER32.dll	GetForegroundWindow	GetForegroundWindow		
+0054d324	USER32.dll	IsIconic	IsIconic		
+0054d328	USER32.dll	SetActiveWindow	SetActiveWindow		
+0054d32c	USER32.dll	GetFocus	GetFocus		
+0054d330	USER32.dll	DispatchMessageA	DispatchMessageA		
+0054d334	USER32.dll	SetFocus	SetFocus		
+0054d030	GDI32.dll	TextOutA	TextOutA		
+0054d034	GDI32.dll	GetSystemPaletteEntries	GetSystemPaletteEntries		
+0054d038	GDI32.dll	GetStockObject	GetStockObject		
+0054d000	ADVAPI32.dll	RegCloseKey	RegCloseKey		
+0054d004	ADVAPI32.dll	RegQueryValueExA	RegQueryValueExA		
+0054d008	ADVAPI32.dll	RegOpenKeyExA	RegOpenKeyExA		
+0054d208	SHELL32.dll	ShellExecuteExA	ShellExecuteExA		
+0054d34c	ole32.dll	CoCreateGuid	CoCreateGuid		
+0054d354	smackw32.DLL	Ordinal_32		32	
+0054d358	smackw32.DLL	Ordinal_21		21	
+0054d35c	smackw32.DLL	Ordinal_38		38	
+0054d360	smackw32.DLL	Ordinal_19		19	
+0054d364	smackw32.DLL	Ordinal_18		18	
+0054d368	smackw32.DLL	Ordinal_23		23	
+0054d36c	smackw32.DLL	Ordinal_17		17	
+0054d370	smackw32.DLL	Ordinal_14		14	
+0054d010	DDRAW.dll	DirectDrawCreate	DirectDrawCreate		00533840
+0054d018	DPLAYX.dll	Ordinal_4		4	00533846
+0054d01c	DPLAYX.dll	Ordinal_2		2	0053384c
+0054d020	DPLAYX.dll	Ordinal_1		1	00533852
+0054d028	DSOUND.dll	Ordinal_1		1	00533858
+0054d210	STORM.dll	Ordinal_252		252	005338d0
+0054d214	STORM.dll	Ordinal_117		117	0053389a
+0054d218	STORM.dll	Ordinal_114		114	005338ca
+0054d21c	STORM.dll	Ordinal_268		268	005338e8
+0054d220	STORM.dll	Ordinal_269		269	005338dc
+0054d224	STORM.dll	Ordinal_130		130	005338be
+0054d228	STORM.dll	Ordinal_107		107	005338c4
+0054d22c	STORM.dll	Ordinal_266		266	005338ee
+0054d230	STORM.dll	Ordinal_468		468	005338f4
+0054d234	STORM.dll	Ordinal_127		127	005338b8
+0054d238	STORM.dll	Ordinal_121		121	005338b2
+0054d23c	STORM.dll	Ordinal_109		109	005338ac
+0054d240	STORM.dll	Ordinal_118		118	00533888
+0054d244	STORM.dll	Ordinal_301		301	00533894
+0054d248	STORM.dll	Ordinal_105		105	0053388e
+0054d24c	STORM.dll	Ordinal_123		123	00533876
+0054d250	STORM.dll	Ordinal_103		103	00533882
+0054d254	STORM.dll	Ordinal_116		116	0053387c
+0054d258	STORM.dll	Ordinal_401		401	00533864
+0054d25c	STORM.dll	Ordinal_101		101	00533870
+0054d260	STORM.dll	Ordinal_102		102	0053386a
+0054d264	STORM.dll	Ordinal_253		253	005338d6
+0054d268	STORM.dll	Ordinal_403		403	0053385e
+0054d26c	STORM.dll	Ordinal_104		104	005338a0
+0054d270	STORM.dll	Ordinal_113		113	005338a6
+0054d274	STORM.dll	Ordinal_265		265	005338e2
+0054d33c	WINMM.dll	timeGetTime	timeGetTime		
+0054d340	WINMM.dll	timeSetEvent	timeSetEvent		
+0054d344	WINMM.dll	timeKillEvent	timeKillEvent		

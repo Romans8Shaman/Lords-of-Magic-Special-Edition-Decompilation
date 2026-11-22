@@ -1,0 +1,67 @@
+/* Rebuilt from lomse.exe FUN_00426a10 @ 0x00426a10 (190 bytes, __fastcall).
+ * Source: Ghidra 12.2 decompilation, cleaned by tools/gen.py. Behaviour-match target, not byte-match. */
+#include "lom.h"
+
+#define DAT_005ae970 (*(int *)0x005ae970)
+#define DAT_005aeefc (*(undefined *)0x005aeefc)
+#define FUN_004192c0 ((uint (__fastcall *)(int))0x004192c0)
+#define FUN_00427880 ((undefined4 (__thiscall *)(void *, int *, int))0x00427880)
+#define FUN_004c2a10 ((longlong (__fastcall *)(int, undefined4, undefined4))0x004c2a10)
+#define FUN_004c6fc0 ((undefined * (__stdcall *)(void))0x004c6fc0)
+#define FUN_00507200 ((undefined4 (__fastcall *)(int))0x00507200)
+#define FUN_00531fb0 ((uint (__thiscall *)(void *, uint, int))0x00531fb0)
+
+#define LOM_SELF_00426a10 1
+undefined8 __fastcall rb_00426a10(int param_1,undefined4 param_2)
+
+{
+  uint uVar1;
+  int iVar2;
+  undefined *this;
+  uint uVar3;
+  undefined4 unused_reg_1;
+  int iVar4;
+  int iVar5;
+  int iVar6;
+  longlong lVar7;
+  uchar _fr[0x18] __attribute__((aligned(8))); /* stack frame: locals at Ghidra offsets */
+  typedef int _t_local_c;
+  typedef uint _t_local_8;
+  typedef int _t_local_4;
+#define local_c (*(_t_local_c *)(_fr + 0x4))
+#define local_8 (*(_t_local_8 *)(_fr + 0x8))
+#define local_4 (*(_t_local_4 *)(_fr + 0xc))
+  
+  local_c = *(int *)(param_1 + 0x538);
+  if (local_c < 0) {
+    return CONCAT44(param_2,0xffffffff);
+  }
+  local_8 = FUN_004192c0(param_1);
+  local_4 = FUN_00507200(param_1);
+  iVar5 = 0;
+  iVar6 = 0;
+  iVar2 = FUN_00427880(&DAT_005aeefc,&local_c,0);
+  iVar4 = iVar2 + *(int *)(param_1 + 0x1c) * 8;
+  uVar1 = *(uint *)(DAT_005ae970 + iVar4 * 4);
+  while (iVar2 != 8) {
+    uVar3 = uVar1;
+    iVar4 = param_1;
+    this = FUN_004c6fc0();
+    uVar3 = FUN_00531fb0(this,uVar3,iVar4);
+    lVar7 = FUN_004c2a10(param_1,unused_reg_1,uVar3);
+    iVar4 = (int)((ulonglong)lVar7 >> 0x20);
+    iVar5 = iVar5 + (int)lVar7;
+    if (local_c < 0) break;
+    iVar2 = FUN_00427880(&DAT_005aeefc,&local_c,0);
+    uVar1 = *(uint *)(DAT_005ae970 + (iVar2 + uVar1 * 8) * 4);
+    iVar4 = DAT_005ae970;
+  }
+  for (iVar5 = iVar5 - local_8; 0 < iVar5; iVar5 = iVar5 - local_4) {
+    iVar6 = iVar6 + 1;
+    iVar4 = local_4;
+  }
+  return CONCAT44(iVar4,iVar6);
+#undef local_c
+#undef local_8
+#undef local_4
+}

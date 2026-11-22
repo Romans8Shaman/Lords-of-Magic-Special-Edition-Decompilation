@@ -1,0 +1,55 @@
+
+void __cdecl op_enterterrainsprite(void *vm)
+
+{
+  void *this;
+  int iVar1;
+  void *pvVar2;
+  uint uVar3;
+  longlong lVar4;
+  float fStack_4;
+  
+  this = vm;
+  if (*(int *)((int)vm + 0x54) < *(int *)((int)vm + 0x58)) {
+    iVar1 = *(int *)((int)vm + 0x54) + 1;
+    *(int *)((int)vm + 0x54) = iVar1;
+    uVar3 = *(uint *)(*(int *)((int)vm + 0x50) + -8 + iVar1 * 8);
+    fStack_4 = *(float *)(*(int *)((int)vm + 0x50) + -4 + iVar1 * 8);
+  }
+  else {
+    *(undefined4 *)((int)vm + 0x90) = 6;
+    FUN_004d4550(vm);
+    *(undefined4 *)((int)this + 0x90) = 0;
+    *(undefined4 *)((int)this + 0xa4) = 0;
+    uVar3 = 0;
+  }
+  uVar3 = uVar3 & 0xff;
+  if (uVar3 != 1) {
+    if (uVar3 == 2) {
+      fStack_4 = (float)((int)fStack_4 >> 8);
+    }
+    else {
+      if (uVar3 != 4) {
+        *(undefined4 *)((int)this + 0x90) = 0xe;
+        FUN_004d4550(this);
+        *(undefined4 *)((int)this + 0x90) = 0;
+        *(undefined4 *)((int)this + 0xa4) = 0;
+        return;
+      }
+      lVar4 = __ftol((float10)fStack_4);
+      fStack_4 = (float)lVar4;
+    }
+  }
+  iVar1 = FUN_0041be40(this,&vm);
+  if (iVar1 != 0) {
+    pvVar2 = (void *)FUN_00482ac0(&DAT_005aa12c,(int)fStack_4,1);
+    if (pvVar2 == (void *)0x0) {
+      FUN_004d41c0(this,s_no_terrain_sprite_00573af4);
+      return;
+    }
+    FUN_004225a0(vm,pvVar2,0);
+  }
+  return;
+}
+
+

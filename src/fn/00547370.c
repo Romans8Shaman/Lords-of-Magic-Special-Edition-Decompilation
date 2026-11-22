@@ -1,0 +1,29 @@
+/* Rebuilt from lomse.exe FUN_00547370 @ 0x00547370 (63 bytes, __cdecl).
+ * Source: Ghidra 12.2 decompilation, cleaned by tools/gen.py. Behaviour-match target, not byte-match. */
+#include "lom.h"
+
+#define DAT_00574e54 (*(int *)0x00574e54)
+
+#define LOM_SELF_00547370 1
+uint __cdecl rb_00547370(int param_1,uint param_2)
+
+{
+  int *piVar1;
+  uint uVar3;
+  uint uVar2;
+  
+  uVar2 = param_2;
+  if (*(int *)(param_2 + 4) != param_1) {
+    uVar3 = param_2;
+    do {
+      uVar2 = uVar3 + 0xc;
+      if (param_2 + DAT_00574e54 * 0xc <= uVar2) break;
+      piVar1 = (int *)(uVar3 + 0x10);
+      uVar3 = uVar2;
+    } while (*piVar1 != param_1);
+  }
+  if ((param_2 + DAT_00574e54 * 0xc <= uVar2) || (*(int *)(uVar2 + 4) != param_1)) {
+    uVar2 = 0;
+  }
+  return uVar2;
+}

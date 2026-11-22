@@ -1,0 +1,13 @@
+
+void __cdecl op_setlastaudiosettings(void)
+
+{
+  FUN_00479a00(&DAT_00585408,DAT_005aa144);
+  FUN_00479b40(&DAT_00585408,DAT_005aa148);
+  FUN_00479c30(&DAT_00585408,DAT_005aa14c);
+  FUN_00479d10(&DAT_00585408,DAT_005aa150);
+  DAT_00586780 = DAT_0058677c;
+  return;
+}
+
+

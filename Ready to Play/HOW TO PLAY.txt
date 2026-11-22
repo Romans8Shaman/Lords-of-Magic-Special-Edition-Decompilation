@@ -1,0 +1,13 @@
+HOW TO PLAY
+
+Copy lomse_sa.exe and lomse_sa.exe.manifest into the English folder of your installed Lords of Magic Special Edition, next to the original lomse.exe. If an older lomse_sa.exe is already there, replace it with this one. Leave the original lomse.exe in place and do not replace or delete it. The .manifest file must sit next to lomse_sa.exe with that exact name.
+
+Turn off XP compatibility mode on lomse_sa.exe before you test: right-click lomse_sa.exe, choose Properties, open the Compatibility tab, uncheck "Run this program in compatibility mode for", then Apply and OK. This build is meant to run natively on Windows 11. You do not need a CD or Sierra registry keys.
+
+When the main menu appears you should hear the announcer say "Welcome to Lords of Magic." Menu button clicks should make a click sound. On the class and faith selection screens you should hear the announcer speak the class names (Warrior, Mage, Thief) and faith names (Order, Chaos, and the others) when you hover or click. The intro, menu, and sequences should still have their normal colors, and the hover labels should still appear. You do not need to start a campaign to test this — the menu and the New Game selection screens are enough.
+
+After you run the game, a file named lomse_sa_audio.log will appear next to lomse_sa.exe. It records every sound request, volume, CreateSoundBuffer, Lock, and Play result, and may be a few hundred kilobytes. If Welcome, menu clicks, or the announcer are still silent, please send that log.
+
+Then double-click lomse_sa.exe to play.
+
+If Windows SmartScreen warns that the app is unrecognized, choose More info, then Run anyway.

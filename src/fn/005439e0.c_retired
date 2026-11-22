@@ -1,0 +1,11 @@
+/* Rebuilt from lomse.exe FUN_005439e0 @ 0x005439e0 (139 bytes, __stdcall).
+ * Source: Ghidra 12.2 decompilation, cleaned by tools/gen.py. Behaviour-match target, not byte-match. */
+#include "lom.h"
+
+
+#define LOM_SELF_005439e0 1
+void __stdcall rb_005439e0(void)
+
+{
+  return;
+}

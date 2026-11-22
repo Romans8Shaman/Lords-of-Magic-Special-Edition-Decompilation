@@ -1,0 +1,9 @@
+
+undefined * FUN_00505f10(void)
+
+{
+  FUN_00505f30(&DAT_005d2460,DAT_00584604,DAT_00584424);
+  return &DAT_005d2460;
+}
+
+

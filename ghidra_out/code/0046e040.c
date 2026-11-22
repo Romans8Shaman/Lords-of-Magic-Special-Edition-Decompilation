@@ -1,0 +1,24 @@
+
+uint __fastcall FUN_0046e040(int param_1)
+
+{
+  uint uVar1;
+  int *piVar2;
+  int iVar3;
+  
+  iVar3 = *(int *)(param_1 + 0xc);
+  uVar1 = 0;
+  if (-1 < iVar3 + -1) {
+    piVar2 = (int *)(*(int *)(param_1 + 4) + 0x20 + (iVar3 + -1) * 0x30);
+    do {
+      if (((*(byte *)(piVar2 + -3) & 8) != 0) && (-1 < *piVar2)) {
+        uVar1 = uVar1 | 1 << ((byte)*piVar2 & 0x1f);
+      }
+      piVar2 = piVar2 + -0xc;
+      iVar3 = iVar3 + -1;
+    } while (iVar3 != 0);
+  }
+  return uVar1;
+}
+
+

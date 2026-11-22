@@ -1,0 +1,6 @@
+#type_id	name	lang	rva	size	file
+3	1	1033	001d7190	744	icon_1.bin
+5	102	1033	001d7490	250	dialog_102.bin
+9	ACCEL_KEYS	1033	001d7890	240	accel_ACCEL_KEYS.bin
+14	101	1033	001d7478	20	group_icon_101.bin
+16	1	1033	001d7590	764	version_1.bin

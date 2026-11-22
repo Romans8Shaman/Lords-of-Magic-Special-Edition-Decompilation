@@ -1,0 +1,44 @@
+/* Rebuilt from lomse.exe FUN_00489ff0 @ 0x00489ff0 (141 bytes, __fastcall).
+ * Source: Ghidra 12.2 decompilation, cleaned by tools/gen.py. Behaviour-match target, not byte-match. */
+#include "lom.h"
+
+#define DAT_00583560 (*(uint *)0x00583560)
+#define DAT_005cd2c4 (*(undefined *)0x005cd2c4)
+#define FUN_0048a1b0 ((undefined4 (__fastcall *)(void *))0x0048a1b0)
+#define FUN_0048a400 ((undefined4 (__fastcall *)(int))0x0048a400)
+#define FUN_0048c2b0 ((int (__fastcall *)(int))0x0048c2b0)
+#define FUN_004c4cf0 ((undefined4 (__fastcall *)(void *))0x004c4cf0)
+#define FUN_004c4d00 ((int (__fastcall *)(int *))0x004c4d00)
+#define FUN_004c4d30 ((undefined4 (__thiscall *)(void *, undefined4))0x004c4d30)
+#define FUN_005262b0 ((undefined4 (__fastcall *)(undefined4 *))0x005262b0)
+
+#define LOM_SELF_00489ff0 1
+undefined4 __fastcall rb_00489ff0(void *param_1)
+
+{
+  uint uVar1;
+  int iVar2;
+  undefined4 uVar3;
+  int iVar4;
+  uint *puVar5;
+  
+  uVar1 = FUN_0048a400(0x584ae8);
+  iVar2 = FUN_004c4d00((int *)&DAT_005cd2c4);
+  uVar3 = FUN_005262b0((undefined4 *)((int)param_1 + 0x487dc));
+  if (0 < iVar2) {
+    do {
+      iVar4 = FUN_004c4cf0(&DAT_005cd2c4);
+      if (*(byte *)(iVar4 + 7) == uVar1) {
+        puVar5 = (uint *)FUN_0048c2b0(iVar4);
+        if ((((puVar5 != (uint *)0x0) && (puVar5[1] == 0)) && (*puVar5 != 0xfffffffe)) &&
+           (DAT_00583560 < *puVar5)) {
+          *puVar5 = DAT_00583560;
+        }
+      }
+      iVar2 = iVar2 + -1;
+    } while (iVar2 != 0);
+  }
+  FUN_004c4d30((undefined4 *)((int)param_1 + 0x487dc),uVar3);
+  FUN_0048a1b0(param_1);
+  return 1;
+}

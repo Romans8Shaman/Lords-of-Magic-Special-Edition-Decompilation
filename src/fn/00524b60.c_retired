@@ -1,0 +1,42 @@
+/* Rebuilt from lomse.exe op_unittype @ 0x00524b60 (192 bytes, __cdecl).
+ * Source: Ghidra 12.2 decompilation, cleaned by tools/gen.py. Behaviour-match target, not byte-match. */
+#include "lom.h"
+
+#define DAT_005cd2ec (*(undefined *)0x005cd2ec)
+#define DAT_005d3348 (*(int *)0x005d3348)
+#define FUN_004d41c0 ((undefined4 (__thiscall *)(void *, char *))0x004d41c0)
+#define FUN_004d4550 ((undefined4 (__fastcall *)(void *))0x004d4550)
+#define FUN_00522a60 ((int (__fastcall *)(int))0x00522a60)
+#define FUN_005241e0 ((int (__thiscall *)(void *, undefined4 *))0x005241e0)
+#define s_unittype_failed_0057417c (*(char (*)[])0x0057417c)
+
+#define LOM_SELF_00524b60 1
+void __cdecl rb_00524b60(void *param_1)
+
+{
+  int iVar1;
+  int iVar2;
+  int iVar3;
+  undefined4 local_3f4 [250];
+
+  FUN_00522a60((int)local_3f4);
+  iVar2 = FUN_005241e0(&DAT_005cd2ec,local_3f4);
+  if (*(int *)((int)param_1 + 0x54) == 0) {
+    *(undefined4 *)((int)param_1 + 0x90) = 3;
+    FUN_004d4550(param_1);
+    *(undefined4 *)((int)param_1 + 0x90) = 0;
+    *(undefined4 *)((int)param_1 + 0xa4) = 0;
+  }
+  else {
+    iVar1 = *(int *)((int)param_1 + 0x50);
+    iVar3 = *(int *)((int)param_1 + 0x54) + -1;
+    *(int *)((int)param_1 + 0x54) = iVar3;
+    *(undefined4 *)(iVar1 + iVar3 * 8) = 1;
+    *(int *)(iVar1 + 4 + iVar3 * 8) = iVar2;
+  }
+  if (iVar2 < 0) {
+    FUN_004d41c0(param_1,s_unittype_failed_0057417c);
+  }
+  DAT_005d3348 = DAT_005d3348 + -1000;
+  return;
+}

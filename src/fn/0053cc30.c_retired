@@ -1,0 +1,14 @@
+/* Rebuilt from lomse.exe FUN_0053cc30 @ 0x0053cc30 (22 bytes, __cdecl).
+ * Source: Ghidra 12.2 decompilation, cleaned by tools/gen.py. Behaviour-match target, not byte-match. */
+#include "lom.h"
+
+#define DAT_00574980 (*(undefined *)0x00574980)
+#define LeaveCriticalSection (*(__typeof__(void (__stdcall *)(LPCRITICAL_SECTION)) *)0x0054d0dc) /* KERNEL32.DLL!LeaveCriticalSection via IAT */
+
+#define LOM_SELF_0053cc30 1
+void __cdecl rb_0053cc30(int param_1)
+
+{
+  LeaveCriticalSection(*(LPCRITICAL_SECTION *)(&DAT_00574980 + param_1 * 4));
+  return;
+}

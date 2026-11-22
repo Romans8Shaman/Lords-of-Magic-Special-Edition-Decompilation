@@ -1,0 +1,141 @@
+/* Rebuilt from lomse.exe op_enumrandonnumbers @ 0x004d6ac0 (501 bytes, __cdecl).
+ * Source: Ghidra 12.2 decompilation, cleaned by tools/gen.py. Behaviour-match target, not byte-match. */
+#include "lom.h"
+
+#define FUN_004026a0 ((undefined4 (__cdecl *)(uint *, uint *, uint *, float *))0x004026a0)
+#define FUN_00404ab0 ((undefined4 (__thiscall *)(void *, undefined4))0x00404ab0)
+#define FUN_004d05e0 ((undefined4 (__thiscall *)(void *, uint, int *))0x004d05e0)
+#define FUN_004d4550 ((undefined4 (__fastcall *)(void *))0x004d4550)
+#define FUN_00504f00 ((int (__cdecl *)(int, int))0x00504f00)
+
+#define LOM_SELF_004d6ac0 1
+void __cdecl rb_004d6ac0(void *vm)
+
+{
+  int iVar1;
+  int iVar2;
+  int iVar3;
+  uint uVar4;
+  uint *puVar5;
+  uchar _fr[0x1b8] __attribute__((aligned(8))); /* stack frame: locals at Ghidra offsets */
+  typedef uint _t_uStack_1b0;
+  typedef int * _t_piStack_1ac;
+  typedef float _t_fStack_1a8;
+  typedef uint _t_uStack_1a4;
+  typedef int * _t_piStack_1a0;
+  typedef uint _t_uStack_19c;
+  typedef float _t_fStack_198;
+  typedef uint _t_uStack_194;
+  typedef uint _t_auStack_190[100];
+#define uStack_1b0 (*(_t_uStack_1b0 *)(_fr + 0x0))
+#define piStack_1ac (*(_t_piStack_1ac *)(_fr + 0x4))
+#define fStack_1a8 (*(_t_fStack_1a8 *)(_fr + 0x8))
+#define uStack_1a4 (*(_t_uStack_1a4 *)(_fr + 0xc))
+#define piStack_1a0 (*(_t_piStack_1a0 *)(_fr + 0x10))
+#define uStack_19c (*(_t_uStack_19c *)(_fr + 0x14))
+#define fStack_198 (*(_t_fStack_198 *)(_fr + 0x18))
+#define uStack_194 (*(_t_uStack_194 *)(_fr + 0x1c))
+#define auStack_190 (*(_t_auStack_190 *)(_fr + 0x20))
+  
+  if (*(int *)((int)vm + 0x54) < *(int *)((int)vm + 0x58)) {
+    iVar1 = *(int *)((int)vm + 0x54) + 1;
+    *(int *)((int)vm + 0x54) = iVar1;
+    uStack_1a4 = *(uint *)(*(int *)((int)vm + 0x50) + -8 + iVar1 * 8);
+    piStack_1a0 = *(int **)(*(int *)((int)vm + 0x50) + -4 + iVar1 * 8);
+  }
+  else {
+    FUN_00404ab0(vm,6);
+    uStack_1a4 = 0;
+    piStack_1a0 = piStack_1ac;
+  }
+  if ((char)uStack_1a4 == '\0') {
+    return;
+  }
+  if (*(int *)((int)vm + 0x54) < *(int *)((int)vm + 0x58)) {
+    iVar1 = *(int *)((int)vm + 0x54) + 1;
+    *(int *)((int)vm + 0x54) = iVar1;
+    uStack_1b0 = *(uint *)(*(int *)((int)vm + 0x50) + -8 + iVar1 * 8);
+    piStack_1ac = *(int **)(*(int *)((int)vm + 0x50) + -4 + iVar1 * 8);
+  }
+  else {
+    FUN_00404ab0(vm,6);
+    uStack_1b0 = 0;
+  }
+  iVar1 = FUN_004026a0(&uStack_1b0,&uStack_19c,(uint *)&fStack_198,&fStack_1a8);
+  if (iVar1 != 0) {
+    if (*(int *)((int)vm + 0x54) < *(int *)((int)vm + 0x58)) {
+      iVar1 = *(int *)((int)vm + 0x54) + 1;
+      *(int *)((int)vm + 0x54) = iVar1;
+      uStack_1b0 = *(uint *)(*(int *)((int)vm + 0x50) + -8 + iVar1 * 8);
+      piStack_1ac = *(int **)(*(int *)((int)vm + 0x50) + -4 + iVar1 * 8);
+    }
+    else {
+      FUN_00404ab0(vm,6);
+      uStack_1b0 = 0;
+    }
+    iVar1 = FUN_004026a0(&uStack_1b0,&uStack_194,(uint *)&fStack_1a8,&fStack_198);
+    if (iVar1 != 0) {
+      puVar5 = auStack_190;
+      for (iVar1 = 100; iVar1 != 0; iVar1 = iVar1 + -1) {
+        *puVar5 = 0xffffffff;
+        puVar5 = puVar5 + 1;
+      }
+      iVar1 = uStack_19c - uStack_194;
+      uVar4 = uStack_194;
+      if ((int)uStack_194 <= (int)uStack_19c) {
+        do {
+          do {
+            iVar2 = FUN_00504f00(0,iVar1);
+          } while (auStack_190[iVar2] != 0xffffffff);
+          auStack_190[iVar2] = uVar4;
+          uVar4 = uVar4 + 1;
+        } while ((int)uVar4 <= (int)uStack_19c);
+      }
+      fStack_1a8 = 0.0;
+      if (iVar1 < 0) {
+        return;
+      }
+      puVar5 = auStack_190;
+      while( true ) {
+        uVar4 = *puVar5;
+        if (*(int *)((int)vm + 0x54) == 0) {
+          *(undefined4 *)((int)vm + 0x90) = 3;
+          FUN_004d4550(vm);
+          *(undefined4 *)((int)vm + 0x90) = 0;
+          *(undefined4 *)((int)vm + 0xa4) = 0;
+        }
+        else {
+          iVar2 = *(int *)((int)vm + 0x50);
+          iVar3 = *(int *)((int)vm + 0x54) + -1;
+          *(int *)((int)vm + 0x54) = iVar3;
+          *(undefined4 *)(iVar2 + iVar3 * 8) = 1;
+          *(uint *)(iVar2 + 4 + iVar3 * 8) = uVar4;
+        }
+        FUN_004d05e0(vm,uStack_1a4,piStack_1a0);
+        iVar2 = *(int *)((int)vm + 0x6c);
+        *(undefined4 *)((int)vm + 0x6c) = *(undefined4 *)((int)vm + 0x70);
+        if (iVar2 != 0) break;
+        puVar5 = puVar5 + 1;
+        fStack_1a8 = __BC(float, (__BC(int, fStack_1a8) + 1));
+        if (iVar1 < __BC(int, fStack_1a8)) {
+          return;
+        }
+      }
+      return;
+    }
+  }
+  *(undefined4 *)((int)vm + 0x90) = 0xe;
+  FUN_004d4550(vm);
+  *(undefined4 *)((int)vm + 0x90) = 0;
+  *(undefined4 *)((int)vm + 0xa4) = 0;
+  return;
+#undef uStack_1b0
+#undef piStack_1ac
+#undef fStack_1a8
+#undef uStack_1a4
+#undef piStack_1a0
+#undef uStack_19c
+#undef fStack_198
+#undef uStack_194
+#undef auStack_190
+}

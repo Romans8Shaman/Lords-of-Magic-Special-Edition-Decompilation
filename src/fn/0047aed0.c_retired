@@ -1,0 +1,28 @@
+/* Rebuilt from lomse.exe FUN_0047aed0 @ 0x0047aed0 (119 bytes, __thiscall).
+ * Source: Ghidra 12.2 decompilation, cleaned by tools/gen.py. Behaviour-match target, not byte-match. */
+#include "lom.h"
+
+#define FUN_0047a8b0(...) ((undefined4 (__thiscall *)(void *, int, undefined4))0x0047a8b0)(__VA_ARGS__, 0) /* +1 unused stack dword(s): ret 8 */
+#define FUN_0053a110 ((uint (__stdcall *)(void))0x0053a110)
+
+#define LOM_SELF_0047aed0 1
+void __thiscall rb_0047aed0(void *this, undefined4 unused_stack_0)
+
+{
+  int *piVar1;
+  uint uVar2;
+  undefined4 uStack00000004;
+  
+  uVar2 = uStack00000004;
+  if (((*(int *)((int)this + 0x13b4) != 0) && (-1 < (int)uStack00000004)) &&
+     ((int)uStack00000004 < 10)) {
+    piVar1 = *(int **)((int)this + 0x784);
+    if ((piVar1 != (int *)0x0) &&
+       (((undefined4 (__stdcall *)(__typeof__(piVar1), __typeof__(&uStack00000004)))(**(code **)(*piVar1 + 0x24)))(piVar1,&uStack00000004), (uStack00000004 & 5) != 0)) {
+      return;
+    }
+    FUN_0053a110();
+    FUN_0047a8b0(this,uVar2);
+  }
+  return;
+}

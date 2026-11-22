@@ -1,0 +1,32 @@
+/* Rebuilt from lomse.exe FUN_004b05e0 @ 0x004b05e0 (136 bytes, __thiscall).
+ * Source: Ghidra 12.2 decompilation, cleaned by tools/gen.py. Behaviour-match target, not byte-match. */
+#include "lom.h"
+
+#define FUN_0049d840 ((undefined4 (__thiscall *)(void *, LONG, LONG, int, int))0x0049d840)
+
+#define LOM_SELF_004b05e0 1
+undefined4 __thiscall rb_004b05e0(void *this,LONG param_1,LONG param_2,int param_3,int param_4)
+
+{
+  int iVar1;
+  
+  if (*(void **)this != (void *)0x0) {
+    iVar1 = FUN_0049d840(*(void **)this,param_1,param_2,param_3,param_4);
+    if (iVar1 != 0) {
+      return 1;
+    }
+  }
+  if (*(void **)((int)this + 4) != (void *)0x0) {
+    iVar1 = FUN_0049d840(*(void **)((int)this + 4),param_1,param_2,param_3,param_4);
+    if (iVar1 != 0) {
+      return 1;
+    }
+  }
+  if (*(void **)((int)this + 8) != (void *)0x0) {
+    iVar1 = FUN_0049d840(*(void **)((int)this + 8),param_1,param_2,param_3,param_4);
+    if (iVar1 != 0) {
+      return 1;
+    }
+  }
+  return 0;
+}

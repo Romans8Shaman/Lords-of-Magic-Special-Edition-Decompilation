@@ -1,0 +1,11 @@
+
+void __fastcall FUN_004bede0(int *param_1)
+
+{
+  if (*param_1 != 0) {
+    Ordinal_403(*param_1,s_C__lomse_source_storm_h_00555130,0x3f6,0);
+  }
+  return;
+}
+
+

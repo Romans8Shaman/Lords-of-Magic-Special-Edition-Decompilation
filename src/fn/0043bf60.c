@@ -1,0 +1,24 @@
+/* Rebuilt from lomse.exe FUN_0043bf60 @ 0x0043bf60 (52 bytes, __fastcall).
+ * Source: Ghidra 12.2 decompilation, cleaned by tools/gen.py. Behaviour-match target, not byte-match. */
+#include "lom.h"
+
+#define DAT_00584ae8 (*(undefined *)0x00584ae8)
+#define DAT_005a7b50 (*(undefined4 *)0x005a7b50)
+#define FUN_00492850 ((int (__thiscall *)(void *, int))0x00492850)
+#define FUN_0049ab20 ((undefined4 (__fastcall *)(int *))0x0049ab20)
+#define FUN_004f6670 ((undefined4 (__thiscall *)(void *, int))0x004f6670)
+
+#define LOM_SELF_0043bf60 1
+void __fastcall rb_0043bf60(int param_1)
+
+{
+  int *piVar1;
+  
+  piVar1 = (int *)FUN_00492850(&DAT_005a7b50,*(int *)(param_1 + 0x50));
+  if (piVar1 != (int *)0x0) {
+    FUN_0049ab20(piVar1);
+    *(undefined4 *)(param_1 + 0x54) = 0xffffffff;
+    FUN_004f6670(&DAT_00584ae8,(int)piVar1);
+  }
+  return;
+}

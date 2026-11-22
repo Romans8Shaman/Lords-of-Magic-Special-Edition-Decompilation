@@ -1,0 +1,36 @@
+/* Rebuilt from lomse.exe FUN_0053cbb0 @ 0x0053cbb0 (118 bytes, __cdecl).
+ * Source: Ghidra 12.2 decompilation, cleaned by tools/gen.py. Behaviour-match target, not byte-match. */
+#include "lom.h"
+
+#define DAT_00574980 (*(undefined *)0x00574980)
+#define EnterCriticalSection (*(__typeof__(void (__stdcall *)(LPCRITICAL_SECTION)) *)0x0054d0d8) /* KERNEL32.DLL!EnterCriticalSection via IAT */
+#define FUN_0053bce0 ((undefined4 (__cdecl *)(undefined *))0x0053bce0)
+#define FUN_0053c1f0 ((undefined4 (__cdecl *)(uint))0x0053c1f0)
+#define FUN_0053cc30 ((undefined4 (__cdecl *)(int))0x0053cc30)
+#define InitializeCriticalSection (*(__typeof__(void (__stdcall *)(LPCRITICAL_SECTION)) *)0x0054d0e4) /* KERNEL32.DLL!InitializeCriticalSection via IAT */
+#define __amsg_exit ((void (__cdecl *)(int))0x0053c470)
+
+#define LOM_SELF_0053cbb0 1
+void __cdecl rb_0053cbb0(int param_1)
+
+{
+  LPCRITICAL_SECTION lpCriticalSection;
+  
+  if (*(int *)(&DAT_00574980 + param_1 * 4) == 0) {
+    lpCriticalSection = (LPCRITICAL_SECTION)FUN_0053c1f0(0x18);
+    if (lpCriticalSection == (LPCRITICAL_SECTION)0x0) {
+      __amsg_exit(0x11);
+    }
+    rb_0053cbb0(0x11);
+    if (*(int *)(&DAT_00574980 + param_1 * 4) == 0) {
+      InitializeCriticalSection(lpCriticalSection);
+      *(LPCRITICAL_SECTION *)(&DAT_00574980 + param_1 * 4) = lpCriticalSection;
+    }
+    else {
+      FUN_0053bce0((undefined *)lpCriticalSection);
+    }
+    FUN_0053cc30(0x11);
+  }
+  EnterCriticalSection(*(LPCRITICAL_SECTION *)(&DAT_00574980 + param_1 * 4));
+  return;
+}

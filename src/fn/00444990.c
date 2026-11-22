@@ -1,0 +1,122 @@
+/* Rebuilt from lomse.exe op_buildingmaxlevel @ 0x00444990 (427 bytes, __cdecl).
+ * HAND 2026-11-12: '(float)x[0x35]' is a bitcast (asm movl copies the int bits), not a conversion; fVar6 kept as int so no x87 load can quiet an SNaN bit pattern.
+ * Source: Ghidra 12.2 decompilation, cleaned by tools/gen.py. Behaviour-match target, not byte-match. */
+#include "lom.h"
+
+#define DAT_005aa12c (*(undefined4 *)0x005aa12c)
+#define FUN_004026a0 ((undefined4 (__cdecl *)(uint *, uint *, uint *, float *))0x004026a0)
+#define FUN_00404ab0 ((undefined4 (__thiscall *)(void *, undefined4))0x00404ab0)
+#define FUN_0043dbb0 ((uint (__fastcall *)(int))0x0043dbb0)
+#define FUN_0043dbd0 ((uint (__fastcall *)(int))0x0043dbd0)
+#define FUN_0043de50 ((undefined4 (__fastcall *)(int))0x0043de50)
+#define FUN_00482ac0 ((uint (__thiscall *)(void *, int, int))0x00482ac0)
+#define FUN_004d4550 ((undefined4 (__fastcall *)(void *))0x004d4550)
+
+#define LOM_SELF_00444990 1
+void __cdecl rb_00444990(void *vm)
+
+{
+  void *pvVar1;
+  int iVar2;
+  uint uVar3;
+  int *piVar4;
+  int *this;
+  int iVar5;
+  int fVar6; /* int bits (orig copies with movl) */
+  uchar _fr[0x18] __attribute__((aligned(8))); /* stack frame: locals at Ghidra offsets */
+  typedef int * _t_piStack_10;
+  typedef float _t_fStack_c;
+  typedef uint _t_uStack_8;
+  typedef undefined4 _t_uStack_4;
+#define piStack_10 (*(_t_piStack_10 *)(_fr + 0x0))
+#define fStack_c (*(_t_fStack_c *)(_fr + 0x4))
+#define uStack_8 (*(_t_uStack_8 *)(_fr + 0x8))
+#define uStack_4 (*(_t_uStack_4 *)(_fr + 0xc))
+  
+  pvVar1 = vm;
+  if (*(int *)((int)vm + 0x54) < *(int *)((int)vm + 0x58)) {
+    iVar2 = *(int *)((int)vm + 0x54) + 1;
+    *(int *)((int)vm + 0x54) = iVar2;
+    uStack_8 = *(uint *)(*(int *)((int)vm + 0x50) + -8 + iVar2 * 8);
+    uStack_4 = *(undefined4 *)(*(int *)((int)vm + 0x50) + -4 + iVar2 * 8);
+  }
+  else {
+    FUN_00404ab0(vm,6);
+    uStack_8 = 0;
+  }
+  iVar2 = FUN_004026a0(&uStack_8,(uint *)&vm,(uint *)&piStack_10,&fStack_c);
+  if (iVar2 == 0) {
+    *(undefined4 *)((int)pvVar1 + 0x90) = 0xe;
+    FUN_004d4550(pvVar1);
+    *(undefined4 *)((int)pvVar1 + 0x90) = 0;
+    *(undefined4 *)((int)pvVar1 + 0xa4) = 0;
+    return;
+  }
+  fVar6 = 3;
+  *(int *)&fStack_c = 3;
+  uVar3 = FUN_00482ac0(&DAT_005aa12c,(int)vm,2);
+  if (uVar3 != 0) {
+    iVar2 = FUN_0043de50(uVar3);
+    piVar4 = (int *)FUN_00482ac0(&DAT_005aa12c,iVar2,2);
+    uVar3 = FUN_00482ac0(&DAT_005aa12c,iVar2,3);
+    if (piVar4 == (int *)0x0) {
+      if (uVar3 != 0) {
+        fVar6 = *(int *)(uVar3 + 0xd4);
+      }
+    }
+    else {
+      this = (int *)FUN_0043dbb0((int)piVar4);
+      piStack_10 = (int *)FUN_0043dbd0((int)piVar4);
+      iVar2 = ((undefined4 (__thiscall *)(__typeof__(piVar4)))(**(code **)(*piVar4 + 0x3c)))(piVar4);
+      iVar5 = ((undefined4 (__thiscall *)(__typeof__(this)))(**(code **)(*this + 0x3c)))(this);
+      if (iVar2 != iVar5) {
+        this = (int *)0x0;
+      }
+      iVar2 = ((undefined4 (__thiscall *)(__typeof__(piVar4)))(**(code **)(*piVar4 + 0x3c)))(piVar4);
+      piVar4 = piStack_10;
+      iVar5 = ((undefined4 (__thiscall *)(__typeof__(piStack_10)))(**(code **)(*piStack_10 + 0x3c)))(piStack_10);
+      if (iVar2 != iVar5) {
+        piVar4 = (int *)0x0;
+      }
+      if (this != (int *)0x0) {
+        if (piVar4 != (int *)0x0) {
+          if (piVar4[0x35] < this[0x35]) {
+            fVar6 = this[0x35];
+          }
+          else {
+            fVar6 = piVar4[0x35];
+          }
+          goto LAB_00444af2;
+        }
+        if (this != (int *)0x0) {
+          fVar6 = this[0x35];
+          goto LAB_00444af2;
+        }
+      }
+      if (piVar4 == (int *)0x0) {
+        fVar6 = *(int *)&fStack_c;
+      }
+      else {
+        fVar6 = piVar4[0x35];
+      }
+    }
+  }
+LAB_00444af2:
+  if (*(int *)((int)pvVar1 + 0x54) == 0) {
+    *(undefined4 *)((int)pvVar1 + 0x90) = 3;
+    FUN_004d4550(pvVar1);
+    *(undefined4 *)((int)pvVar1 + 0x90) = 0;
+    *(undefined4 *)((int)pvVar1 + 0xa4) = 0;
+    return;
+  }
+  iVar2 = *(int *)((int)pvVar1 + 0x50);
+  iVar5 = *(int *)((int)pvVar1 + 0x54) + -1;
+  *(int *)((int)pvVar1 + 0x54) = iVar5;
+  *(undefined4 *)(iVar2 + iVar5 * 8) = 1;
+  *(int *)(iVar2 + 4 + iVar5 * 8) = fVar6;
+  return;
+#undef piStack_10
+#undef fStack_c
+#undef uStack_8
+#undef uStack_4
+}

@@ -1,0 +1,51 @@
+/* Rebuilt from lomse.exe op_getcombatselectionbits @ 0x0052f910 (203 bytes, __cdecl).
+ * Source: Ghidra 12.2 decompilation, cleaned by tools/gen.py. Behaviour-match target, not byte-match. */
+#include "lom.h"
+
+#define DAT_005a7d8c (*(int *)0x005a7d8c)
+#define DAT_005a7d90 (*(undefined *)0x005a7d90)
+#define DAT_005a8078 (*(undefined4 *)0x005a8078)
+#define DAT_005ae974 (*(undefined4 *)0x005ae974)
+#define FUN_00407d50 ((undefined4 (__fastcall *)(int))0x00407d50)
+#define FUN_004d41c0 ((undefined4 (__thiscall *)(void *, char *))0x004d41c0)
+#define FUN_004d4550 ((undefined4 (__fastcall *)(void *))0x004d4550)
+#define FUN_004fbe60 ((undefined4 (__thiscall *)(void *, int, int))0x004fbe60)
+#define s_not_in_combat_005743c4 (*(char (*)[])0x005743c4)
+
+#define LOM_SELF_0052f910 1
+void __cdecl rb_0052f910(void *vm)
+
+{
+  int iVar1;
+  int iVar2;
+  int iVar3;
+  uint uVar4;
+  
+  iVar1 = *(int *)(&DAT_005a7d90 + DAT_005a7d8c * 0x400);
+  if ((&DAT_005a8078)[DAT_005a7d8c * 0x100] != 3) {
+    FUN_004d41c0(vm,s_not_in_combat_005743c4);
+    return;
+  }
+  uVar4 = 0;
+  for (iVar2 = FUN_004fbe60(&DAT_005ae974,0,0); iVar2 != 0;
+      iVar2 = FUN_004fbe60(&DAT_005ae974,iVar2,0)) {
+    iVar3 = FUN_00407d50(iVar2);
+    if (((iVar3 == 0) && (*(int *)(iVar2 + 0x48) == iVar1)) &&
+       ((*(byte *)(iVar2 + 0x30) & 0x20) != 0)) {
+      uVar4 = uVar4 | 1 << (*(byte *)(iVar2 + 0x5ac) & 0x1f);
+    }
+  }
+  if (*(int *)((int)vm + 0x54) == 0) {
+    *(undefined4 *)((int)vm + 0x90) = 3;
+    FUN_004d4550(vm);
+    *(undefined4 *)((int)vm + 0x90) = 0;
+    *(undefined4 *)((int)vm + 0xa4) = 0;
+    return;
+  }
+  iVar1 = *(int *)((int)vm + 0x50);
+  iVar2 = *(int *)((int)vm + 0x54) + -1;
+  *(int *)((int)vm + 0x54) = iVar2;
+  *(undefined4 *)(iVar1 + iVar2 * 8) = 1;
+  *(uint *)(iVar1 + 4 + iVar2 * 8) = uVar4;
+  return;
+}

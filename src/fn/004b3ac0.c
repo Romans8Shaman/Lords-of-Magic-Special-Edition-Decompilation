@@ -1,0 +1,97 @@
+/* Rebuilt from lomse.exe FUN_004b3ac0 @ 0x004b3ac0 (395 bytes, __fastcall).
+ * Source: Ghidra 12.2 decompilation, cleaned by tools/gen.py. Behaviour-match target, not byte-match. */
+#include "lom.h"
+
+#define DAT_00584d54 (*(HWND *)0x00584d54)
+#define DAT_00586644 (*(int *)0x00586644)
+#define FUN_0053a090 ((int (__cdecl *)(undefined1 *, ...))0x0053a090)
+#define GetDC (*(__typeof__(HDC (__stdcall *)(HWND)) *)0x0054d27c) /* USER32.DLL!GetDC via IAT */
+#define TextOutA (*(__typeof__(BOOL (__stdcall *)(HDC, int, int, LPCSTR, int)) *)0x0054d030) /* GDI32.DLL!TextOutA via IAT */
+#define s__s_lose5_wav_0055ce80 (*(char (*)[])0x0055ce80)
+#define s__s_lose_da_wav_0055cebc (*(char (*)[])0x0055cebc)
+#define s__s_lose_db_wav_0055ceac (*(char (*)[])0x0055ceac)
+#define s__s_neut_da_wav_0055cefc (*(char (*)[])0x0055cefc)
+#define s__s_neut_db_wav_0055ceec (*(char (*)[])0x0055ceec)
+#define s__s_win5_wav_0055ce90 (*(char (*)[])0x0055ce90)
+#define s__s_win_da_wav_0055cedc (*(char (*)[])0x0055cedc)
+#define s__s_win_db_wav_0055cecc (*(char (*)[])0x0055cecc)
+
+#define LOM_SELF_004b3ac0 1
+BOOL __fastcall rb_004b3ac0(int param_1)
+
+{
+  char cVar1;
+  int iVar2;
+  HDC hdc;
+  BOOL BVar3;
+  uint uVar4;
+  LPCSTR pCVar5;
+  char *pcVar6;
+  
+  if (DAT_00586644 == 0) {
+    iVar2 = *(int *)(param_1 + 0x1240);
+    if (*(char *)(param_1 + 0x1345) == '\0') {
+      if (iVar2 == 5) {
+        FUN_0053a090((undefined1 *)(param_1 + 0x1244),s__s_lose5_wav_0055ce80,
+                     *(uint *)(param_1 + 0x1394));
+        goto LAB_004b3c0c;
+      }
+      uVar4 = *(uint *)(param_1 + 0x1394);
+      pcVar6 = s__s_lose_da_wav_0055cebc;
+    }
+    else {
+      if (iVar2 == 5) {
+        *(undefined4 *)(param_1 + 0xfc8) = 1;
+        goto LAB_004b3c0c;
+      }
+      uVar4 = *(uint *)(param_1 + 0x1394);
+      pcVar6 = s__s_lose_db_wav_0055ceac;
+    }
+  }
+  else if (DAT_00586644 == 1) {
+    iVar2 = *(int *)(param_1 + 0x1240);
+    if (*(char *)(param_1 + 0x1345) == '\0') {
+      if (iVar2 == 5) {
+        FUN_0053a090((undefined1 *)(param_1 + 0x1244),s__s_win5_wav_0055ce90,
+                     *(uint *)(param_1 + 0x1394));
+        goto LAB_004b3c0c;
+      }
+      uVar4 = *(uint *)(param_1 + 0x1394);
+      pcVar6 = s__s_win_da_wav_0055cedc;
+    }
+    else {
+      if (iVar2 == 5) {
+        *(undefined4 *)(param_1 + 0xfc8) = 1;
+        goto LAB_004b3c0c;
+      }
+      uVar4 = *(uint *)(param_1 + 0x1394);
+      pcVar6 = s__s_win_db_wav_0055cecc;
+    }
+  }
+  else {
+    uVar4 = *(uint *)(param_1 + 0x1394);
+    iVar2 = (int)*(char *)(param_1 + 0x1344);
+    if (*(char *)(param_1 + 0x1345) != '\0') {
+      FUN_0053a090((undefined1 *)(param_1 + 0x1244),s__s_neut_db_wav_0055ceec,uVar4,iVar2);
+      *(char *)(param_1 + 0x1344) = (*(char *)(param_1 + 0x1344) == '\x01') + '\x01';
+      goto LAB_004b3c0c;
+    }
+    pcVar6 = s__s_neut_da_wav_0055cefc;
+  }
+  FUN_0053a090((undefined1 *)(param_1 + 0x1244),pcVar6,uVar4,iVar2);
+LAB_004b3c0c:
+  BVar3 = 0;
+  if (*(int *)(param_1 + 0x1390) != 0) {
+    hdc = GetDC(DAT_00584d54);
+    uVar4 = 0xffffffff;
+    pCVar5 = (LPCSTR)(param_1 + 0x1244);
+    do {
+      if (uVar4 == 0) break;
+      uVar4 = uVar4 - 1;
+      cVar1 = *pCVar5;
+      pCVar5 = pCVar5 + 1;
+    } while (cVar1 != '\0');
+    BVar3 = TextOutA(hdc,10,0x15e,(LPCSTR)(param_1 + 0x1244),~uVar4 - 1);
+  }
+  return BVar3;
+}

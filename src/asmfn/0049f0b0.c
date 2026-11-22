@@ -1,0 +1,50 @@
+/* FUN_0049f0b0 @ 0x0049f0b0 (104 bytes): ASM FALLBACK (no behaviour-verified C yet).
+ * Same instruction sequence as lomse.exe; branch targets via local labels / absolute slots. tools/gen_asmfn.py */
+#include "lom.h"
+#define LOM_SELF_0049f0b0 1
+__attribute__((naked)) void rb_0049f0b0(void)
+{
+  __asm__(
+    "  movb 0x5836d0, %cl\n"
+    "  movb $1, %al\n"
+    "  testb %cl, %al\n"
+    "  jne .L0049f117\n"
+    "  movl 0x5836f4, %edx\n"
+    "  orb %al, %cl\n"
+    "  testl %edx, %edx\n"
+    "  movb %cl, 0x5836d0\n"
+    "  je .L0049f10d\n"
+    ".L0049f0ce:\n"
+    "  movl %edx, %ecx\n"
+    "  movl 0x3c(%edx), %edx\n"
+    "  testl %ecx, %ecx\n"
+    "  movl %edx, 0x5836f4\n"
+    "  je .L0049f0eb\n"
+    "  movl (%ecx), %eax\n"
+    "  pushl $0\n"
+    "  call *(%eax)\n"
+    "  movl 0x5836f4, %edx\n"
+    "  jmp .L0049f0ed\n"
+    ".L0049f0eb:\n"
+    "  xorl %eax, %eax\n"
+    ".L0049f0ed:\n"
+    "  testl %eax, %eax\n"
+    "  je .L0049f109\n"
+    "  pushl $0\n"
+    "  pushl $0x3eb\n"
+    "  pushl $0x555130\n"
+    "  pushl %eax\n"
+    "  call *_lom_af_0049f0b0_0\n"
+    "  movl 0x5836f4, %edx\n"
+    ".L0049f109:\n"
+    "  testl %edx, %edx\n"
+    "  jne .L0049f0ce\n"
+    ".L0049f10d:\n"
+    "  movl $0, 0x5836f4\n"
+    ".L0049f117:\n"
+    "  retl \n"
+  );
+}
+__asm__(".data\n"
+  "_lom_af_0049f0b0_0: .long 0x0053385e\n"
+  ".text\n");

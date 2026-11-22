@@ -1,0 +1,69 @@
+/* Rebuilt from lomse.exe FUN_004ea340 @ 0x004ea340 (249 bytes, __thiscall).
+ * Source: Ghidra 12.2 decompilation, cleaned by tools/gen.py. Behaviour-match target, not byte-match. */
+#include "lom.h"
+
+#define FUN_004e9f30 ((undefined4 (__thiscall *)(void *, uint))0x004e9f30)
+#define __ftol(x) ((longlong)(float10)(x)) /* MSVC CRT: x87 truncating convert */
+
+#define LOM_SELF_004ea340 1
+void __thiscall rb_004ea340(void *this,int param_1,int param_2,uint param_3,uint param_4)
+
+{
+  uint uVar1;
+  longlong lVar2;
+  
+  uVar1 = param_3 & 0xff;
+  *(undefined4 *)((int)this + 0x22c) = 1;
+  if (uVar1 == 1) {
+    uVar1 = param_4;
+  }
+  else if (uVar1 == 2) {
+    uVar1 = (int)param_4 >> 8;
+  }
+  else if (uVar1 == 4) {
+    lVar2 = __ftol((float10)(float)param_4);
+    uVar1 = (uint)lVar2;
+  }
+  else {
+    if (param_2 != 8) {
+      return;
+    }
+    uVar1 = 8;
+  }
+  if ((3 < param_2) || ((-1 < param_1 && (param_1 < *(int *)((int)this + 0x20c))))) {
+    switch(param_2) {
+    case 0:
+      *(uint *)(param_1 * 0x10 + 0xc + (int)this) = uVar1;
+      return;
+    case 1:
+      *(uint *)((param_1 + 1) * 0x10 + (int)this) = uVar1;
+      return;
+    case 2:
+    case 3:
+      *(uint *)(param_1 * 0x10 + 0x14 + (int)this) = uVar1;
+      return;
+    case 4:
+      if ((-1 < (int)uVar1) && ((int)uVar1 < 0x20)) {
+        *(uint *)((int)this + 0x20c) = uVar1;
+        return;
+      }
+      break;
+    case 5:
+      *(uint *)this = uVar1;
+      return;
+    case 6:
+      *(uint *)((int)this + 4) = uVar1;
+      return;
+    case 7:
+      *(uint *)((int)this + 8) = uVar1;
+      return;
+    case 8:
+      *(uint *)((int)this + 0x210) = param_3;
+      *(uint *)((int)this + 0x214) = param_4;
+      return;
+    case 9:
+      FUN_004e9f30(this,uVar1);
+    }
+  }
+  return;
+}

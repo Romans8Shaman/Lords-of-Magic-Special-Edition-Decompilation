@@ -1,0 +1,422 @@
+/* IAT symbols: generated, do not edit. */
+
+.global __imp_KERNEL32_GetComputerNameA
+.set __imp_KERNEL32_GetComputerNameA, 0x0054d040
+.global __imp_KERNEL32_GetLastError
+.set __imp_KERNEL32_GetLastError, 0x0054d044
+.global __imp_KERNEL32_GetModuleFileNameA
+.set __imp_KERNEL32_GetModuleFileNameA, 0x0054d048
+.global __imp_KERNEL32_GlobalFree
+.set __imp_KERNEL32_GlobalFree, 0x0054d04c
+.global __imp_KERNEL32_SetEvent
+.set __imp_KERNEL32_SetEvent, 0x0054d050
+.global __imp_KERNEL32_CloseHandle
+.set __imp_KERNEL32_CloseHandle, 0x0054d054
+.global __imp_KERNEL32_GlobalUnlock
+.set __imp_KERNEL32_GlobalUnlock, 0x0054d058
+.global __imp_KERNEL32_GlobalHandle
+.set __imp_KERNEL32_GlobalHandle, 0x0054d05c
+.global __imp_KERNEL32_MapViewOfFile
+.set __imp_KERNEL32_MapViewOfFile, 0x0054d060
+.global __imp_KERNEL32_GetTempPathA
+.set __imp_KERNEL32_GetTempPathA, 0x0054d064
+.global __imp_KERNEL32_CreateFileMappingA
+.set __imp_KERNEL32_CreateFileMappingA, 0x0054d068
+.global __imp_KERNEL32_CreateFileA
+.set __imp_KERNEL32_CreateFileA, 0x0054d06c
+.global __imp_KERNEL32_InterlockedExchange
+.set __imp_KERNEL32_InterlockedExchange, 0x0054d070
+.global __imp_KERNEL32_LocalFree
+.set __imp_KERNEL32_LocalFree, 0x0054d074
+.global __imp_KERNEL32_FormatMessageA
+.set __imp_KERNEL32_FormatMessageA, 0x0054d078
+.global __imp_KERNEL32_GetDiskFreeSpaceA
+.set __imp_KERNEL32_GetDiskFreeSpaceA, 0x0054d07c
+.global __imp_KERNEL32_UnmapViewOfFile
+.set __imp_KERNEL32_UnmapViewOfFile, 0x0054d080
+.global __imp_KERNEL32_GetFileSize
+.set __imp_KERNEL32_GetFileSize, 0x0054d084
+.global __imp_KERNEL32_ResetEvent
+.set __imp_KERNEL32_ResetEvent, 0x0054d088
+.global __imp_KERNEL32_CreateThread
+.set __imp_KERNEL32_CreateThread, 0x0054d08c
+.global __imp_KERNEL32_FreeLibrary
+.set __imp_KERNEL32_FreeLibrary, 0x0054d090
+.global __imp_KERNEL32_GetProcAddress
+.set __imp_KERNEL32_GetProcAddress, 0x0054d094
+.global __imp_KERNEL32_GetModuleHandleA
+.set __imp_KERNEL32_GetModuleHandleA, 0x0054d098
+.global __imp_KERNEL32_TerminateThread
+.set __imp_KERNEL32_TerminateThread, 0x0054d09c
+.global __imp_KERNEL32_GetExitCodeThread
+.set __imp_KERNEL32_GetExitCodeThread, 0x0054d0a0
+.global __imp_KERNEL32_DeleteFileA
+.set __imp_KERNEL32_DeleteFileA, 0x0054d0a4
+.global __imp_KERNEL32_VirtualFree
+.set __imp_KERNEL32_VirtualFree, 0x0054d0a8
+.global __imp_KERNEL32_VirtualAlloc
+.set __imp_KERNEL32_VirtualAlloc, 0x0054d0ac
+.global __imp_KERNEL32_GetDriveTypeA
+.set __imp_KERNEL32_GetDriveTypeA, 0x0054d0b0
+.global __imp_KERNEL32_GetTempFileNameA
+.set __imp_KERNEL32_GetTempFileNameA, 0x0054d0b4
+.global __imp_KERNEL32_GlobalMemoryStatus
+.set __imp_KERNEL32_GlobalMemoryStatus, 0x0054d0b8
+.global __imp_KERNEL32_CreateDirectoryA
+.set __imp_KERNEL32_CreateDirectoryA, 0x0054d0bc
+.global __imp_KERNEL32_DebugBreak
+.set __imp_KERNEL32_DebugBreak, 0x0054d0c0
+.global __imp_KERNEL32_WaitForSingleObject
+.set __imp_KERNEL32_WaitForSingleObject, 0x0054d0c4
+.global __imp_KERNEL32_GlobalAlloc
+.set __imp_KERNEL32_GlobalAlloc, 0x0054d0c8
+.global __imp_KERNEL32_GlobalLock
+.set __imp_KERNEL32_GlobalLock, 0x0054d0cc
+.global __imp_KERNEL32_Sleep
+.set __imp_KERNEL32_Sleep, 0x0054d0d0
+.global __imp_KERNEL32_CreateEventA
+.set __imp_KERNEL32_CreateEventA, 0x0054d0d4
+.global __imp_KERNEL32_EnterCriticalSection
+.set __imp_KERNEL32_EnterCriticalSection, 0x0054d0d8
+.global __imp_KERNEL32_LeaveCriticalSection
+.set __imp_KERNEL32_LeaveCriticalSection, 0x0054d0dc
+.global __imp_KERNEL32_DeleteCriticalSection
+.set __imp_KERNEL32_DeleteCriticalSection, 0x0054d0e0
+.global __imp_KERNEL32_InitializeCriticalSection
+.set __imp_KERNEL32_InitializeCriticalSection, 0x0054d0e4
+.global __imp_KERNEL32_GetTickCount
+.set __imp_KERNEL32_GetTickCount, 0x0054d0e8
+.global __imp_KERNEL32_LoadLibraryA
+.set __imp_KERNEL32_LoadLibraryA, 0x0054d0ec
+.global __imp_KERNEL32_CompareFileTime
+.set __imp_KERNEL32_CompareFileTime, 0x0054d0f0
+.global __imp_KERNEL32_GetFileTime
+.set __imp_KERNEL32_GetFileTime, 0x0054d0f4
+.global __imp_KERNEL32_OutputDebugStringA
+.set __imp_KERNEL32_OutputDebugStringA, 0x0054d0f8
+.global __imp_KERNEL32_WriteFile
+.set __imp_KERNEL32_WriteFile, 0x0054d0fc
+.global __imp_KERNEL32_CompareStringA
+.set __imp_KERNEL32_CompareStringA, 0x0054d100
+.global __imp_KERNEL32_GetLocaleInfoW
+.set __imp_KERNEL32_GetLocaleInfoW, 0x0054d104
+.global __imp_KERNEL32_GetStringTypeW
+.set __imp_KERNEL32_GetStringTypeW, 0x0054d108
+.global __imp_KERNEL32_GetStringTypeA
+.set __imp_KERNEL32_GetStringTypeA, 0x0054d10c
+.global __imp_KERNEL32_GetLocaleInfoA
+.set __imp_KERNEL32_GetLocaleInfoA, 0x0054d110
+.global __imp_KERNEL32_IsBadCodePtr
+.set __imp_KERNEL32_IsBadCodePtr, 0x0054d114
+.global __imp_KERNEL32_IsBadWritePtr
+.set __imp_KERNEL32_IsBadWritePtr, 0x0054d118
+.global __imp_KERNEL32_IsBadReadPtr
+.set __imp_KERNEL32_IsBadReadPtr, 0x0054d11c
+.global __imp_KERNEL32_SetUnhandledExceptionFilter
+.set __imp_KERNEL32_SetUnhandledExceptionFilter, 0x0054d120
+.global __imp_KERNEL32_FlushFileBuffers
+.set __imp_KERNEL32_FlushFileBuffers, 0x0054d124
+.global __imp_KERNEL32_GetEnvironmentStringsW
+.set __imp_KERNEL32_GetEnvironmentStringsW, 0x0054d128
+.global __imp_KERNEL32_GetEnvironmentStrings
+.set __imp_KERNEL32_GetEnvironmentStrings, 0x0054d12c
+.global __imp_KERNEL32_FreeEnvironmentStringsW
+.set __imp_KERNEL32_FreeEnvironmentStringsW, 0x0054d130
+.global __imp_KERNEL32_FreeEnvironmentStringsA
+.set __imp_KERNEL32_FreeEnvironmentStringsA, 0x0054d134
+.global __imp_KERNEL32_SetEndOfFile
+.set __imp_KERNEL32_SetEndOfFile, 0x0054d138
+.global __imp_KERNEL32_SetStdHandle
+.set __imp_KERNEL32_SetStdHandle, 0x0054d13c
+.global __imp_KERNEL32_HeapCreate
+.set __imp_KERNEL32_HeapCreate, 0x0054d140
+.global __imp_KERNEL32_HeapDestroy
+.set __imp_KERNEL32_HeapDestroy, 0x0054d144
+.global __imp_KERNEL32_GetCurrentProcessId
+.set __imp_KERNEL32_GetCurrentProcessId, 0x0054d148
+.global __imp_KERNEL32_GetStdHandle
+.set __imp_KERNEL32_GetStdHandle, 0x0054d14c
+.global __imp_KERNEL32_SetHandleCount
+.set __imp_KERNEL32_SetHandleCount, 0x0054d150
+.global __imp_KERNEL32_UnhandledExceptionFilter
+.set __imp_KERNEL32_UnhandledExceptionFilter, 0x0054d154
+.global __imp_KERNEL32_GetOEMCP
+.set __imp_KERNEL32_GetOEMCP, 0x0054d158
+.global __imp_KERNEL32_GetACP
+.set __imp_KERNEL32_GetACP, 0x0054d15c
+.global __imp_KERNEL32_GetCPInfo
+.set __imp_KERNEL32_GetCPInfo, 0x0054d160
+.global __imp_KERNEL32_RaiseException
+.set __imp_KERNEL32_RaiseException, 0x0054d164
+.global __imp_KERNEL32_LCMapStringW
+.set __imp_KERNEL32_LCMapStringW, 0x0054d168
+.global __imp_KERNEL32_LCMapStringA
+.set __imp_KERNEL32_LCMapStringA, 0x0054d16c
+.global __imp_KERNEL32_WideCharToMultiByte
+.set __imp_KERNEL32_WideCharToMultiByte, 0x0054d170
+.global __imp_KERNEL32_MultiByteToWideChar
+.set __imp_KERNEL32_MultiByteToWideChar, 0x0054d174
+.global __imp_KERNEL32_SetFilePointer
+.set __imp_KERNEL32_SetFilePointer, 0x0054d178
+.global __imp_KERNEL32_HeapSize
+.set __imp_KERNEL32_HeapSize, 0x0054d17c
+.global __imp_KERNEL32_GetSystemTime
+.set __imp_KERNEL32_GetSystemTime, 0x0054d180
+.global __imp_KERNEL32_GetTimeZoneInformation
+.set __imp_KERNEL32_GetTimeZoneInformation, 0x0054d184
+.global __imp_KERNEL32_HeapReAlloc
+.set __imp_KERNEL32_HeapReAlloc, 0x0054d188
+.global __imp_KERNEL32_GetCurrentProcess
+.set __imp_KERNEL32_GetCurrentProcess, 0x0054d18c
+.global __imp_KERNEL32_TerminateProcess
+.set __imp_KERNEL32_TerminateProcess, 0x0054d190
+.global __imp_KERNEL32_TlsGetValue
+.set __imp_KERNEL32_TlsGetValue, 0x0054d194
+.global __imp_KERNEL32_SetLastError
+.set __imp_KERNEL32_SetLastError, 0x0054d198
+.global __imp_KERNEL32_TlsAlloc
+.set __imp_KERNEL32_TlsAlloc, 0x0054d19c
+.global __imp_KERNEL32_GetCurrentThreadId
+.set __imp_KERNEL32_GetCurrentThreadId, 0x0054d1a0
+.global __imp_KERNEL32_CompareStringW
+.set __imp_KERNEL32_CompareStringW, 0x0054d1a4
+.global __imp_KERNEL32_ReadFile
+.set __imp_KERNEL32_ReadFile, 0x0054d1a8
+.global __imp_KERNEL32_GetLocalTime
+.set __imp_KERNEL32_GetLocalTime, 0x0054d1ac
+.global __imp_KERNEL32_ExitProcess
+.set __imp_KERNEL32_ExitProcess, 0x0054d1b0
+.global __imp_KERNEL32_GetVersion
+.set __imp_KERNEL32_GetVersion, 0x0054d1b4
+.global __imp_KERNEL32_GetCommandLineA
+.set __imp_KERNEL32_GetCommandLineA, 0x0054d1b8
+.global __imp_KERNEL32_GetStartupInfoA
+.set __imp_KERNEL32_GetStartupInfoA, 0x0054d1bc
+.global __imp_KERNEL32_HeapAlloc
+.set __imp_KERNEL32_HeapAlloc, 0x0054d1c0
+.global __imp_KERNEL32_GetFileType
+.set __imp_KERNEL32_GetFileType, 0x0054d1c4
+.global __imp_KERNEL32_FileTimeToSystemTime
+.set __imp_KERNEL32_FileTimeToSystemTime, 0x0054d1c8
+.global __imp_KERNEL32_FileTimeToLocalFileTime
+.set __imp_KERNEL32_FileTimeToLocalFileTime, 0x0054d1cc
+.global __imp_KERNEL32_FindFirstFileA
+.set __imp_KERNEL32_FindFirstFileA, 0x0054d1d0
+.global __imp_KERNEL32_ExitThread
+.set __imp_KERNEL32_ExitThread, 0x0054d1d4
+.global __imp_KERNEL32_FindNextFileA
+.set __imp_KERNEL32_FindNextFileA, 0x0054d1d8
+.global __imp_KERNEL32_ResumeThread
+.set __imp_KERNEL32_ResumeThread, 0x0054d1dc
+.global __imp_KERNEL32_InterlockedIncrement
+.set __imp_KERNEL32_InterlockedIncrement, 0x0054d1e0
+.global __imp_KERNEL32_TlsSetValue
+.set __imp_KERNEL32_TlsSetValue, 0x0054d1e4
+.global __imp_KERNEL32_RtlUnwind
+.set __imp_KERNEL32_RtlUnwind, 0x0054d1e8
+.global __imp_KERNEL32_SetEnvironmentVariableA
+.set __imp_KERNEL32_SetEnvironmentVariableA, 0x0054d1ec
+.global __imp_KERNEL32_InterlockedDecrement
+.set __imp_KERNEL32_InterlockedDecrement, 0x0054d1f0
+.global __imp_KERNEL32_GetCurrentDirectoryA
+.set __imp_KERNEL32_GetCurrentDirectoryA, 0x0054d1f4
+.global __imp_KERNEL32_SetCurrentDirectoryA
+.set __imp_KERNEL32_SetCurrentDirectoryA, 0x0054d1f8
+.global __imp_KERNEL32_GetFullPathNameA
+.set __imp_KERNEL32_GetFullPathNameA, 0x0054d1fc
+.global __imp_KERNEL32_HeapFree
+.set __imp_KERNEL32_HeapFree, 0x0054d200
+.global __imp_USER32_GetDC
+.set __imp_USER32_GetDC, 0x0054d27c
+.global __imp_USER32_DestroyWindow
+.set __imp_USER32_DestroyWindow, 0x0054d280
+.global __imp_USER32_PeekMessageA
+.set __imp_USER32_PeekMessageA, 0x0054d284
+.global __imp_USER32_DrawTextA
+.set __imp_USER32_DrawTextA, 0x0054d288
+.global __imp_USER32_MessageBoxA
+.set __imp_USER32_MessageBoxA, 0x0054d28c
+.global __imp_USER32_GetCursorPos
+.set __imp_USER32_GetCursorPos, 0x0054d290
+.global __imp_USER32_MessageBeep
+.set __imp_USER32_MessageBeep, 0x0054d294
+.global __imp_USER32_PtInRect
+.set __imp_USER32_PtInRect, 0x0054d298
+.global __imp_USER32_PostQuitMessage
+.set __imp_USER32_PostQuitMessage, 0x0054d29c
+.global __imp_USER32_ShowCursor
+.set __imp_USER32_ShowCursor, 0x0054d2a0
+.global __imp_USER32_SetCursorPos
+.set __imp_USER32_SetCursorPos, 0x0054d2a4
+.global __imp_USER32_GetCursor
+.set __imp_USER32_GetCursor, 0x0054d2a8
+.global __imp_USER32_SetDlgItemInt
+.set __imp_USER32_SetDlgItemInt, 0x0054d2ac
+.global __imp_USER32_PostMessageA
+.set __imp_USER32_PostMessageA, 0x0054d2b0
+.global __imp_USER32_GetDlgItemTextA
+.set __imp_USER32_GetDlgItemTextA, 0x0054d2b4
+.global __imp_USER32_SendDlgItemMessageA
+.set __imp_USER32_SendDlgItemMessageA, 0x0054d2b8
+.global __imp_USER32_RedrawWindow
+.set __imp_USER32_RedrawWindow, 0x0054d2bc
+.global __imp_USER32_ShowWindow
+.set __imp_USER32_ShowWindow, 0x0054d2c0
+.global __imp_USER32_IsWindow
+.set __imp_USER32_IsWindow, 0x0054d2c4
+.global __imp_USER32_SendMessageA
+.set __imp_USER32_SendMessageA, 0x0054d2c8
+.global __imp_USER32_IsWindowVisible
+.set __imp_USER32_IsWindowVisible, 0x0054d2cc
+.global __imp_USER32_CreateDialogParamA
+.set __imp_USER32_CreateDialogParamA, 0x0054d2d0
+.global __imp_USER32_SetCursor
+.set __imp_USER32_SetCursor, 0x0054d2d4
+.global __imp_USER32_LoadCursorA
+.set __imp_USER32_LoadCursorA, 0x0054d2d8
+.global __imp_USER32_ReleaseDC
+.set __imp_USER32_ReleaseDC, 0x0054d2dc
+.global __imp_USER32_LoadAcceleratorsA
+.set __imp_USER32_LoadAcceleratorsA, 0x0054d2e0
+.global __imp_USER32_UpdateWindow
+.set __imp_USER32_UpdateWindow, 0x0054d2e4
+.global __imp_USER32_ReleaseCapture
+.set __imp_USER32_ReleaseCapture, 0x0054d2e8
+.global __imp_USER32_SetCapture
+.set __imp_USER32_SetCapture, 0x0054d2ec
+.global __imp_USER32_GetAsyncKeyState
+.set __imp_USER32_GetAsyncKeyState, 0x0054d2f0
+.global __imp_USER32_DefWindowProcA
+.set __imp_USER32_DefWindowProcA, 0x0054d2f4
+.global __imp_USER32_TranslateAcceleratorA
+.set __imp_USER32_TranslateAcceleratorA, 0x0054d2f8
+.global __imp_USER32_IsDialogMessageA
+.set __imp_USER32_IsDialogMessageA, 0x0054d2fc
+.global __imp_USER32_LoadIconA
+.set __imp_USER32_LoadIconA, 0x0054d300
+.global __imp_USER32_RegisterClassA
+.set __imp_USER32_RegisterClassA, 0x0054d304
+.global __imp_USER32_GetSystemMetrics
+.set __imp_USER32_GetSystemMetrics, 0x0054d308
+.global __imp_USER32_CreateWindowExA
+.set __imp_USER32_CreateWindowExA, 0x0054d30c
+.global __imp_USER32_SetForegroundWindow
+.set __imp_USER32_SetForegroundWindow, 0x0054d310
+.global __imp_USER32_GetMessageA
+.set __imp_USER32_GetMessageA, 0x0054d314
+.global __imp_USER32_ValidateRect
+.set __imp_USER32_ValidateRect, 0x0054d318
+.global __imp_USER32_TranslateMessage
+.set __imp_USER32_TranslateMessage, 0x0054d31c
+.global __imp_USER32_GetForegroundWindow
+.set __imp_USER32_GetForegroundWindow, 0x0054d320
+.global __imp_USER32_IsIconic
+.set __imp_USER32_IsIconic, 0x0054d324
+.global __imp_USER32_SetActiveWindow
+.set __imp_USER32_SetActiveWindow, 0x0054d328
+.global __imp_USER32_GetFocus
+.set __imp_USER32_GetFocus, 0x0054d32c
+.global __imp_USER32_DispatchMessageA
+.set __imp_USER32_DispatchMessageA, 0x0054d330
+.global __imp_USER32_SetFocus
+.set __imp_USER32_SetFocus, 0x0054d334
+.global __imp_GDI32_TextOutA
+.set __imp_GDI32_TextOutA, 0x0054d030
+.global __imp_GDI32_GetSystemPaletteEntries
+.set __imp_GDI32_GetSystemPaletteEntries, 0x0054d034
+.global __imp_GDI32_GetStockObject
+.set __imp_GDI32_GetStockObject, 0x0054d038
+.global __imp_ADVAPI32_RegCloseKey
+.set __imp_ADVAPI32_RegCloseKey, 0x0054d000
+.global __imp_ADVAPI32_RegQueryValueExA
+.set __imp_ADVAPI32_RegQueryValueExA, 0x0054d004
+.global __imp_ADVAPI32_RegOpenKeyExA
+.set __imp_ADVAPI32_RegOpenKeyExA, 0x0054d008
+.global __imp_SHELL32_ShellExecuteExA
+.set __imp_SHELL32_ShellExecuteExA, 0x0054d208
+.global __imp_OLE32_CoCreateGuid
+.set __imp_OLE32_CoCreateGuid, 0x0054d34c
+.global __imp_SMACKW32_Ordinal_32
+.set __imp_SMACKW32_Ordinal_32, 0x0054d354
+.global __imp_SMACKW32_Ordinal_21
+.set __imp_SMACKW32_Ordinal_21, 0x0054d358
+.global __imp_SMACKW32_Ordinal_38
+.set __imp_SMACKW32_Ordinal_38, 0x0054d35c
+.global __imp_SMACKW32_Ordinal_19
+.set __imp_SMACKW32_Ordinal_19, 0x0054d360
+.global __imp_SMACKW32_Ordinal_18
+.set __imp_SMACKW32_Ordinal_18, 0x0054d364
+.global __imp_SMACKW32_Ordinal_23
+.set __imp_SMACKW32_Ordinal_23, 0x0054d368
+.global __imp_SMACKW32_Ordinal_17
+.set __imp_SMACKW32_Ordinal_17, 0x0054d36c
+.global __imp_SMACKW32_Ordinal_14
+.set __imp_SMACKW32_Ordinal_14, 0x0054d370
+.global __imp_DDRAW_DirectDrawCreate
+.set __imp_DDRAW_DirectDrawCreate, 0x0054d010
+.global __imp_DPLAYX_Ordinal_4
+.set __imp_DPLAYX_Ordinal_4, 0x0054d018
+.global __imp_DPLAYX_Ordinal_2
+.set __imp_DPLAYX_Ordinal_2, 0x0054d01c
+.global __imp_DPLAYX_Ordinal_1
+.set __imp_DPLAYX_Ordinal_1, 0x0054d020
+.global __imp_DSOUND_Ordinal_1
+.set __imp_DSOUND_Ordinal_1, 0x0054d028
+.global __imp_STORM_Ordinal_252
+.set __imp_STORM_Ordinal_252, 0x0054d210
+.global __imp_STORM_Ordinal_117
+.set __imp_STORM_Ordinal_117, 0x0054d214
+.global __imp_STORM_Ordinal_114
+.set __imp_STORM_Ordinal_114, 0x0054d218
+.global __imp_STORM_Ordinal_268
+.set __imp_STORM_Ordinal_268, 0x0054d21c
+.global __imp_STORM_Ordinal_269
+.set __imp_STORM_Ordinal_269, 0x0054d220
+.global __imp_STORM_Ordinal_130
+.set __imp_STORM_Ordinal_130, 0x0054d224
+.global __imp_STORM_Ordinal_107
+.set __imp_STORM_Ordinal_107, 0x0054d228
+.global __imp_STORM_Ordinal_266
+.set __imp_STORM_Ordinal_266, 0x0054d22c
+.global __imp_STORM_Ordinal_468
+.set __imp_STORM_Ordinal_468, 0x0054d230
+.global __imp_STORM_Ordinal_127
+.set __imp_STORM_Ordinal_127, 0x0054d234
+.global __imp_STORM_Ordinal_121
+.set __imp_STORM_Ordinal_121, 0x0054d238
+.global __imp_STORM_Ordinal_109
+.set __imp_STORM_Ordinal_109, 0x0054d23c
+.global __imp_STORM_Ordinal_118
+.set __imp_STORM_Ordinal_118, 0x0054d240
+.global __imp_STORM_Ordinal_301
+.set __imp_STORM_Ordinal_301, 0x0054d244
+.global __imp_STORM_Ordinal_105
+.set __imp_STORM_Ordinal_105, 0x0054d248
+.global __imp_STORM_Ordinal_123
+.set __imp_STORM_Ordinal_123, 0x0054d24c
+.global __imp_STORM_Ordinal_103
+.set __imp_STORM_Ordinal_103, 0x0054d250
+.global __imp_STORM_Ordinal_116
+.set __imp_STORM_Ordinal_116, 0x0054d254
+.global __imp_STORM_Ordinal_401
+.set __imp_STORM_Ordinal_401, 0x0054d258
+.global __imp_STORM_Ordinal_101
+.set __imp_STORM_Ordinal_101, 0x0054d25c
+.global __imp_STORM_Ordinal_102
+.set __imp_STORM_Ordinal_102, 0x0054d260
+.global __imp_STORM_Ordinal_253
+.set __imp_STORM_Ordinal_253, 0x0054d264
+.global __imp_STORM_Ordinal_403
+.set __imp_STORM_Ordinal_403, 0x0054d268
+.global __imp_STORM_Ordinal_104
+.set __imp_STORM_Ordinal_104, 0x0054d26c
+.global __imp_STORM_Ordinal_113
+.set __imp_STORM_Ordinal_113, 0x0054d270
+.global __imp_STORM_Ordinal_265
+.set __imp_STORM_Ordinal_265, 0x0054d274
+.global __imp_WINMM_timeGetTime
+.set __imp_WINMM_timeGetTime, 0x0054d33c
+.global __imp_WINMM_timeSetEvent
+.set __imp_WINMM_timeSetEvent, 0x0054d340
+.global __imp_WINMM_timeKillEvent
+.set __imp_WINMM_timeKillEvent, 0x0054d344

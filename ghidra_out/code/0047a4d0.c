@@ -1,0 +1,49 @@
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __cdecl op_stopsoundfx(void *vm)
+
+{
+  int iVar1;
+  uint uVar2;
+  longlong lVar3;
+  float fStack_4;
+  
+  if (*(int *)((int)vm + 0x54) < *(int *)((int)vm + 0x58)) {
+    iVar1 = *(int *)((int)vm + 0x54) + 1;
+    *(int *)((int)vm + 0x54) = iVar1;
+    uVar2 = *(uint *)(*(int *)((int)vm + 0x50) + -8 + iVar1 * 8);
+    fStack_4 = *(float *)(*(int *)((int)vm + 0x50) + -4 + iVar1 * 8);
+  }
+  else {
+    *(undefined4 *)((int)vm + 0x90) = 6;
+    FUN_004d4550(vm);
+    *(undefined4 *)((int)vm + 0x90) = 0;
+    *(undefined4 *)((int)vm + 0xa4) = 0;
+    uVar2 = 0;
+  }
+  uVar2 = uVar2 & 0xff;
+  if (uVar2 == 1) {
+    _DAT_005867a0 = fStack_4;
+    FUN_00478920(&DAT_00585408);
+    return;
+  }
+  if (uVar2 == 2) {
+    _DAT_005867a0 = (float)((int)fStack_4 >> 8);
+    FUN_00478920(&DAT_00585408);
+    return;
+  }
+  if (uVar2 == 4) {
+    lVar3 = __ftol((float10)fStack_4);
+    _DAT_005867a0 = (float)lVar3;
+    FUN_00478920(&DAT_00585408);
+    return;
+  }
+  *(undefined4 *)((int)vm + 0x90) = 0xe;
+  FUN_004d4550(vm);
+  *(undefined4 *)((int)vm + 0x90) = 0;
+  *(undefined4 *)((int)vm + 0xa4) = 0;
+  return;
+}
+
+

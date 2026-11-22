@@ -1,0 +1,11 @@
+
+void Unwind_0054a33a(void)
+
+{
+  int unaff_EBP;
+  
+  thunk_FUN_00495590((int *)(*(int *)(unaff_EBP + -0x10) + 0x5e8));
+  return;
+}
+
+

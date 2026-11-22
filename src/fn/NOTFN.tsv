@@ -1,0 +1,8 @@
+#addr	classification	covered_by	false_size	notes
+00544d57	not-a-function	00544c10	554	Mid-byte false start (second byte of push $1 at 00544d56) inside already-fn 00544c10. See build/00544d57_NOTFN.md. Do not hook. Omitted from hookset_r134 (installed 2026-11-19 10:34 EST). 0 hits in r132, r133, and r134.
+00539f29	tail-of-already-fn	00539f23	23	Continuation of already-fn 00539f23 (Ghidra ended that parent after 6 bytes at 00539f28). Do not hook. See build/UNCOVERED7.md. Never in the hookset.
+0053a068	tail-of-already-fn	0053a05f	20	Continuation of already-fn 0053a05f (Ghidra ended that parent after 9 bytes at 0053a067). Do not hook. See build/UNCOVERED7.md. Never in the hookset.
+0053eb78	tail-of-already-fn	0053eb6f	78	Continuation of already-fn 0053eb6f (Ghidra ended that parent after 9 bytes at 0053eb77); C++ catch fragment. Do not hook. See build/UNCOVERED7.md. Never in the hookset.
+00544843	mid-label-of-already-fn	00544810	2	jmp 00544847 inside already-fn 00544810 (Ghidra ended that parent at 00544842). Do not hook. See build/UNCOVERED7.md. Never in the hookset.
+00544845	mid-label-of-already-fn	00544810	2	xor esi,esi (the jumped-over else) inside already-fn 00544810. Do not hook. See build/UNCOVERED7.md. Never in the hookset.
+00544847	tail-of-already-fn	00544810	53	Continuation after jmp 00544843 inside already-fn 00544810. Do not hook. See build/UNCOVERED7.md. Never in the hookset.

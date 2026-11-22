@@ -1,0 +1,37 @@
+
+void __cdecl op_combatopponent(void *vm)
+
+{
+  int iVar1;
+  undefined4 uVar2;
+  int iVar3;
+  int iVar4;
+  
+  uVar2 = DAT_005aadb0;
+  iVar1 = DAT_005aa7d4;
+  if (DAT_005aa7d4 == DAT_005577c8) {
+    if (*(int *)((int)vm + 0x54) != 0) {
+      iVar3 = *(int *)((int)vm + 0x54) + -1;
+      *(int *)((int)vm + 0x54) = iVar3;
+      iVar1 = *(int *)((int)vm + 0x50);
+      *(undefined4 *)(iVar1 + iVar3 * 8) = 1;
+      *(undefined4 *)(iVar1 + 4 + iVar3 * 8) = uVar2;
+      return;
+    }
+  }
+  else if (*(int *)((int)vm + 0x54) != 0) {
+    iVar4 = *(int *)((int)vm + 0x54) + -1;
+    *(int *)((int)vm + 0x54) = iVar4;
+    iVar3 = *(int *)((int)vm + 0x50);
+    *(undefined4 *)(iVar3 + iVar4 * 8) = 1;
+    *(int *)(iVar3 + 4 + iVar4 * 8) = iVar1;
+    return;
+  }
+  *(undefined4 *)((int)vm + 0x90) = 3;
+  FUN_004d4550(vm);
+  *(undefined4 *)((int)vm + 0x90) = 0;
+  *(undefined4 *)((int)vm + 0xa4) = 0;
+  return;
+}
+
+

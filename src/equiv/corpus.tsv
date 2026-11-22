@@ -1,0 +1,12 @@
+# Broader play corpus for NEXT_PHASE step 9.3 (not only Fire Mage cap-80).
+# name	cls_x	cls_y	faith_x	faith_y	cap	notes
+# play_lane_cls.sh: CLS="${cls_x} ${cls_y}" FAITH="${faith_x} ${faith_y}"
+# Class cards at Y=195: Warrior 117, Mage 325. Faith portraits after class Choose
+# were probed on LoM_eq_van / DISPLAY=:3 (2026-11-19 15:36–15:43 EST).
+# Death is not a valid start (Balkoth warning).
+fire_mage	325	195	585	235	80	routine official checkpoint (TACT=1 TACTAI=1)
+fire_warrior	117	195	585	235	40	play_lane_cls.sh default class, shorter cap
+earth_mage	325	195	225	345	40	Gnomish / Earth magic (probed)
+water_mage	325	195	70	145	40	blue-swirl Water mage (probed)
+chaos_mage	325	195	50	260	40	Chaos champion at left desk (probed)
+life_mage	325	195	405	345	40	Elven / Life at crystals (probed)

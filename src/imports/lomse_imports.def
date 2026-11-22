@@ -1,0 +1,244 @@
+; Import table of vanilla Lords of Magic SE 3.01 lomse.exe (md5 92a0d830e54a9d2934bb3e9b71dcad80).
+; Source of truth companion to src/imports/iat.tsv and thunks.tsv.
+; IAT at 0x0054d000 size 0x378; import directory at 0x005536f0 size 0x104.
+; This is documentation / later standalone-link input. The 33 .text jmp*IAT thunks
+; must keep jumping to these lomse IAT slots (harness hooks run inside lomse.exe;
+; rb_part is currently built with no imports). Do not use this .def to give
+; smackw32.dll its own IAT for these symbols.
+
+LIBRARY "lomse.exe"
+
+; ---- KERNEL32.dll (113) ----
+;   GetComputerNameA                  ; GetComputerNameA, IAT 0x0054d040
+;   GetLastError                      ; GetLastError, IAT 0x0054d044
+;   GetModuleFileNameA                ; GetModuleFileNameA, IAT 0x0054d048
+;   GlobalFree                        ; GlobalFree, IAT 0x0054d04c
+;   SetEvent                          ; SetEvent, IAT 0x0054d050
+;   CloseHandle                       ; CloseHandle, IAT 0x0054d054
+;   GlobalUnlock                      ; GlobalUnlock, IAT 0x0054d058
+;   GlobalHandle                      ; GlobalHandle, IAT 0x0054d05c
+;   MapViewOfFile                     ; MapViewOfFile, IAT 0x0054d060
+;   GetTempPathA                      ; GetTempPathA, IAT 0x0054d064
+;   CreateFileMappingA                ; CreateFileMappingA, IAT 0x0054d068
+;   CreateFileA                       ; CreateFileA, IAT 0x0054d06c
+;   InterlockedExchange               ; InterlockedExchange, IAT 0x0054d070
+;   LocalFree                         ; LocalFree, IAT 0x0054d074
+;   FormatMessageA                    ; FormatMessageA, IAT 0x0054d078
+;   GetDiskFreeSpaceA                 ; GetDiskFreeSpaceA, IAT 0x0054d07c
+;   UnmapViewOfFile                   ; UnmapViewOfFile, IAT 0x0054d080
+;   GetFileSize                       ; GetFileSize, IAT 0x0054d084
+;   ResetEvent                        ; ResetEvent, IAT 0x0054d088
+;   CreateThread                      ; CreateThread, IAT 0x0054d08c
+;   FreeLibrary                       ; FreeLibrary, IAT 0x0054d090
+;   GetProcAddress                    ; GetProcAddress, IAT 0x0054d094
+;   GetModuleHandleA                  ; GetModuleHandleA, IAT 0x0054d098
+;   TerminateThread                   ; TerminateThread, IAT 0x0054d09c
+;   GetExitCodeThread                 ; GetExitCodeThread, IAT 0x0054d0a0
+;   DeleteFileA                       ; DeleteFileA, IAT 0x0054d0a4
+;   VirtualFree                       ; VirtualFree, IAT 0x0054d0a8
+;   VirtualAlloc                      ; VirtualAlloc, IAT 0x0054d0ac
+;   GetDriveTypeA                     ; GetDriveTypeA, IAT 0x0054d0b0
+;   GetTempFileNameA                  ; GetTempFileNameA, IAT 0x0054d0b4
+;   GlobalMemoryStatus                ; GlobalMemoryStatus, IAT 0x0054d0b8
+;   CreateDirectoryA                  ; CreateDirectoryA, IAT 0x0054d0bc
+;   DebugBreak                        ; DebugBreak, IAT 0x0054d0c0
+;   WaitForSingleObject               ; WaitForSingleObject, IAT 0x0054d0c4
+;   GlobalAlloc                       ; GlobalAlloc, IAT 0x0054d0c8
+;   GlobalLock                        ; GlobalLock, IAT 0x0054d0cc
+;   Sleep                             ; Sleep, IAT 0x0054d0d0
+;   CreateEventA                      ; CreateEventA, IAT 0x0054d0d4
+;   EnterCriticalSection              ; EnterCriticalSection, IAT 0x0054d0d8
+;   LeaveCriticalSection              ; LeaveCriticalSection, IAT 0x0054d0dc
+;   DeleteCriticalSection             ; DeleteCriticalSection, IAT 0x0054d0e0
+;   InitializeCriticalSection         ; InitializeCriticalSection, IAT 0x0054d0e4
+;   GetTickCount                      ; GetTickCount, IAT 0x0054d0e8
+;   LoadLibraryA                      ; LoadLibraryA, IAT 0x0054d0ec
+;   CompareFileTime                   ; CompareFileTime, IAT 0x0054d0f0
+;   GetFileTime                       ; GetFileTime, IAT 0x0054d0f4
+;   OutputDebugStringA                ; OutputDebugStringA, IAT 0x0054d0f8
+;   WriteFile                         ; WriteFile, IAT 0x0054d0fc
+;   CompareStringA                    ; CompareStringA, IAT 0x0054d100
+;   GetLocaleInfoW                    ; GetLocaleInfoW, IAT 0x0054d104
+;   GetStringTypeW                    ; GetStringTypeW, IAT 0x0054d108
+;   GetStringTypeA                    ; GetStringTypeA, IAT 0x0054d10c
+;   GetLocaleInfoA                    ; GetLocaleInfoA, IAT 0x0054d110
+;   IsBadCodePtr                      ; IsBadCodePtr, IAT 0x0054d114
+;   IsBadWritePtr                     ; IsBadWritePtr, IAT 0x0054d118
+;   IsBadReadPtr                      ; IsBadReadPtr, IAT 0x0054d11c
+;   SetUnhandledExceptionFilter       ; SetUnhandledExceptionFilter, IAT 0x0054d120
+;   FlushFileBuffers                  ; FlushFileBuffers, IAT 0x0054d124
+;   GetEnvironmentStringsW            ; GetEnvironmentStringsW, IAT 0x0054d128
+;   GetEnvironmentStrings             ; GetEnvironmentStrings, IAT 0x0054d12c
+;   FreeEnvironmentStringsW           ; FreeEnvironmentStringsW, IAT 0x0054d130
+;   FreeEnvironmentStringsA           ; FreeEnvironmentStringsA, IAT 0x0054d134
+;   SetEndOfFile                      ; SetEndOfFile, IAT 0x0054d138
+;   SetStdHandle                      ; SetStdHandle, IAT 0x0054d13c
+;   HeapCreate                        ; HeapCreate, IAT 0x0054d140
+;   HeapDestroy                       ; HeapDestroy, IAT 0x0054d144
+;   GetCurrentProcessId               ; GetCurrentProcessId, IAT 0x0054d148, thunk 0x00542040
+;   GetStdHandle                      ; GetStdHandle, IAT 0x0054d14c
+;   SetHandleCount                    ; SetHandleCount, IAT 0x0054d150
+;   UnhandledExceptionFilter          ; UnhandledExceptionFilter, IAT 0x0054d154
+;   GetOEMCP                          ; GetOEMCP, IAT 0x0054d158
+;   GetACP                            ; GetACP, IAT 0x0054d15c
+;   GetCPInfo                         ; GetCPInfo, IAT 0x0054d160
+;   RaiseException                    ; RaiseException, IAT 0x0054d164
+;   LCMapStringW                      ; LCMapStringW, IAT 0x0054d168
+;   LCMapStringA                      ; LCMapStringA, IAT 0x0054d16c
+;   WideCharToMultiByte               ; WideCharToMultiByte, IAT 0x0054d170
+;   MultiByteToWideChar               ; MultiByteToWideChar, IAT 0x0054d174
+;   SetFilePointer                    ; SetFilePointer, IAT 0x0054d178
+;   HeapSize                          ; HeapSize, IAT 0x0054d17c
+;   GetSystemTime                     ; GetSystemTime, IAT 0x0054d180
+;   GetTimeZoneInformation            ; GetTimeZoneInformation, IAT 0x0054d184
+;   HeapReAlloc                       ; HeapReAlloc, IAT 0x0054d188
+;   GetCurrentProcess                 ; GetCurrentProcess, IAT 0x0054d18c
+;   TerminateProcess                  ; TerminateProcess, IAT 0x0054d190
+;   TlsGetValue                       ; TlsGetValue, IAT 0x0054d194
+;   SetLastError                      ; SetLastError, IAT 0x0054d198
+;   TlsAlloc                          ; TlsAlloc, IAT 0x0054d19c
+;   GetCurrentThreadId                ; GetCurrentThreadId, IAT 0x0054d1a0
+;   CompareStringW                    ; CompareStringW, IAT 0x0054d1a4
+;   ReadFile                          ; ReadFile, IAT 0x0054d1a8
+;   GetLocalTime                      ; GetLocalTime, IAT 0x0054d1ac
+;   ExitProcess                       ; ExitProcess, IAT 0x0054d1b0
+;   GetVersion                        ; GetVersion, IAT 0x0054d1b4
+;   GetCommandLineA                   ; GetCommandLineA, IAT 0x0054d1b8
+;   GetStartupInfoA                   ; GetStartupInfoA, IAT 0x0054d1bc
+;   HeapAlloc                         ; HeapAlloc, IAT 0x0054d1c0
+;   GetFileType                       ; GetFileType, IAT 0x0054d1c4
+;   FileTimeToSystemTime              ; FileTimeToSystemTime, IAT 0x0054d1c8
+;   FileTimeToLocalFileTime           ; FileTimeToLocalFileTime, IAT 0x0054d1cc
+;   FindFirstFileA                    ; FindFirstFileA, IAT 0x0054d1d0
+;   ExitThread                        ; ExitThread, IAT 0x0054d1d4
+;   FindNextFileA                     ; FindNextFileA, IAT 0x0054d1d8
+;   ResumeThread                      ; ResumeThread, IAT 0x0054d1dc
+;   InterlockedIncrement              ; InterlockedIncrement, IAT 0x0054d1e0
+;   TlsSetValue                       ; TlsSetValue, IAT 0x0054d1e4
+;   RtlUnwind                         ; RtlUnwind, IAT 0x0054d1e8, thunk 0x00548e00
+;   SetEnvironmentVariableA           ; SetEnvironmentVariableA, IAT 0x0054d1ec
+;   InterlockedDecrement              ; InterlockedDecrement, IAT 0x0054d1f0
+;   GetCurrentDirectoryA              ; GetCurrentDirectoryA, IAT 0x0054d1f4
+;   SetCurrentDirectoryA              ; SetCurrentDirectoryA, IAT 0x0054d1f8
+;   GetFullPathNameA                  ; GetFullPathNameA, IAT 0x0054d1fc
+;   HeapFree                          ; HeapFree, IAT 0x0054d200
+
+; ---- USER32.dll (47) ----
+;   GetDC                             ; GetDC, IAT 0x0054d27c
+;   DestroyWindow                     ; DestroyWindow, IAT 0x0054d280
+;   PeekMessageA                      ; PeekMessageA, IAT 0x0054d284
+;   DrawTextA                         ; DrawTextA, IAT 0x0054d288
+;   MessageBoxA                       ; MessageBoxA, IAT 0x0054d28c
+;   GetCursorPos                      ; GetCursorPos, IAT 0x0054d290
+;   MessageBeep                       ; MessageBeep, IAT 0x0054d294
+;   PtInRect                          ; PtInRect, IAT 0x0054d298
+;   PostQuitMessage                   ; PostQuitMessage, IAT 0x0054d29c
+;   ShowCursor                        ; ShowCursor, IAT 0x0054d2a0
+;   SetCursorPos                      ; SetCursorPos, IAT 0x0054d2a4
+;   GetCursor                         ; GetCursor, IAT 0x0054d2a8
+;   SetDlgItemInt                     ; SetDlgItemInt, IAT 0x0054d2ac
+;   PostMessageA                      ; PostMessageA, IAT 0x0054d2b0
+;   GetDlgItemTextA                   ; GetDlgItemTextA, IAT 0x0054d2b4
+;   SendDlgItemMessageA               ; SendDlgItemMessageA, IAT 0x0054d2b8
+;   RedrawWindow                      ; RedrawWindow, IAT 0x0054d2bc
+;   ShowWindow                        ; ShowWindow, IAT 0x0054d2c0
+;   IsWindow                          ; IsWindow, IAT 0x0054d2c4
+;   SendMessageA                      ; SendMessageA, IAT 0x0054d2c8
+;   IsWindowVisible                   ; IsWindowVisible, IAT 0x0054d2cc
+;   CreateDialogParamA                ; CreateDialogParamA, IAT 0x0054d2d0
+;   SetCursor                         ; SetCursor, IAT 0x0054d2d4
+;   LoadCursorA                       ; LoadCursorA, IAT 0x0054d2d8
+;   ReleaseDC                         ; ReleaseDC, IAT 0x0054d2dc
+;   LoadAcceleratorsA                 ; LoadAcceleratorsA, IAT 0x0054d2e0
+;   UpdateWindow                      ; UpdateWindow, IAT 0x0054d2e4
+;   ReleaseCapture                    ; ReleaseCapture, IAT 0x0054d2e8
+;   SetCapture                        ; SetCapture, IAT 0x0054d2ec
+;   GetAsyncKeyState                  ; GetAsyncKeyState, IAT 0x0054d2f0
+;   DefWindowProcA                    ; DefWindowProcA, IAT 0x0054d2f4
+;   TranslateAcceleratorA             ; TranslateAcceleratorA, IAT 0x0054d2f8
+;   IsDialogMessageA                  ; IsDialogMessageA, IAT 0x0054d2fc
+;   LoadIconA                         ; LoadIconA, IAT 0x0054d300
+;   RegisterClassA                    ; RegisterClassA, IAT 0x0054d304
+;   GetSystemMetrics                  ; GetSystemMetrics, IAT 0x0054d308
+;   CreateWindowExA                   ; CreateWindowExA, IAT 0x0054d30c
+;   SetForegroundWindow               ; SetForegroundWindow, IAT 0x0054d310
+;   GetMessageA                       ; GetMessageA, IAT 0x0054d314
+;   ValidateRect                      ; ValidateRect, IAT 0x0054d318
+;   TranslateMessage                  ; TranslateMessage, IAT 0x0054d31c
+;   GetForegroundWindow               ; GetForegroundWindow, IAT 0x0054d320
+;   IsIconic                          ; IsIconic, IAT 0x0054d324
+;   SetActiveWindow                   ; SetActiveWindow, IAT 0x0054d328
+;   GetFocus                          ; GetFocus, IAT 0x0054d32c
+;   DispatchMessageA                  ; DispatchMessageA, IAT 0x0054d330
+;   SetFocus                          ; SetFocus, IAT 0x0054d334
+
+; ---- GDI32.dll (3) ----
+;   TextOutA                          ; TextOutA, IAT 0x0054d030
+;   GetSystemPaletteEntries           ; GetSystemPaletteEntries, IAT 0x0054d034
+;   GetStockObject                    ; GetStockObject, IAT 0x0054d038
+
+; ---- ADVAPI32.dll (3) ----
+;   RegCloseKey                       ; RegCloseKey, IAT 0x0054d000
+;   RegQueryValueExA                  ; RegQueryValueExA, IAT 0x0054d004
+;   RegOpenKeyExA                     ; RegOpenKeyExA, IAT 0x0054d008
+
+; ---- SHELL32.dll (1) ----
+;   ShellExecuteExA                   ; ShellExecuteExA, IAT 0x0054d208
+
+; ---- ole32.dll (1) ----
+;   CoCreateGuid                      ; CoCreateGuid, IAT 0x0054d34c
+
+; ---- smackw32.DLL (8) ----
+;   Ordinal_32                        ; NONAME ordinal 32, IAT 0x0054d354
+;   Ordinal_21                        ; NONAME ordinal 21, IAT 0x0054d358
+;   Ordinal_38                        ; NONAME ordinal 38, IAT 0x0054d35c
+;   Ordinal_19                        ; NONAME ordinal 19, IAT 0x0054d360
+;   Ordinal_18                        ; NONAME ordinal 18, IAT 0x0054d364
+;   Ordinal_23                        ; NONAME ordinal 23, IAT 0x0054d368
+;   Ordinal_17                        ; NONAME ordinal 17, IAT 0x0054d36c
+;   Ordinal_14                        ; NONAME ordinal 14, IAT 0x0054d370
+
+; ---- DDRAW.dll (1) ----
+;   DirectDrawCreate                  ; DirectDrawCreate, IAT 0x0054d010, thunk 0x00533840
+
+; ---- DPLAYX.dll (3) ----
+;   Ordinal_4                         ; NONAME ordinal 4, IAT 0x0054d018, thunk 0x00533846
+;   Ordinal_2                         ; NONAME ordinal 2, IAT 0x0054d01c, thunk 0x0053384c
+;   Ordinal_1                         ; NONAME ordinal 1, IAT 0x0054d020, thunk 0x00533852
+
+; ---- DSOUND.dll (1) ----
+;   Ordinal_1                         ; NONAME ordinal 1, IAT 0x0054d028, thunk 0x00533858
+
+; ---- STORM.dll (26) ----
+;   Ordinal_252                       ; NONAME ordinal 252, IAT 0x0054d210, thunk 0x005338d0
+;   Ordinal_117                       ; NONAME ordinal 117, IAT 0x0054d214, thunk 0x0053389a
+;   Ordinal_114                       ; NONAME ordinal 114, IAT 0x0054d218, thunk 0x005338ca
+;   Ordinal_268                       ; NONAME ordinal 268, IAT 0x0054d21c, thunk 0x005338e8
+;   Ordinal_269                       ; NONAME ordinal 269, IAT 0x0054d220, thunk 0x005338dc
+;   Ordinal_130                       ; NONAME ordinal 130, IAT 0x0054d224, thunk 0x005338be
+;   Ordinal_107                       ; NONAME ordinal 107, IAT 0x0054d228, thunk 0x005338c4
+;   Ordinal_266                       ; NONAME ordinal 266, IAT 0x0054d22c, thunk 0x005338ee
+;   Ordinal_468                       ; NONAME ordinal 468, IAT 0x0054d230, thunk 0x005338f4
+;   Ordinal_127                       ; NONAME ordinal 127, IAT 0x0054d234, thunk 0x005338b8
+;   Ordinal_121                       ; NONAME ordinal 121, IAT 0x0054d238, thunk 0x005338b2
+;   Ordinal_109                       ; NONAME ordinal 109, IAT 0x0054d23c, thunk 0x005338ac
+;   Ordinal_118                       ; NONAME ordinal 118, IAT 0x0054d240, thunk 0x00533888
+;   Ordinal_301                       ; NONAME ordinal 301, IAT 0x0054d244, thunk 0x00533894
+;   Ordinal_105                       ; NONAME ordinal 105, IAT 0x0054d248, thunk 0x0053388e
+;   Ordinal_123                       ; NONAME ordinal 123, IAT 0x0054d24c, thunk 0x00533876
+;   Ordinal_103                       ; NONAME ordinal 103, IAT 0x0054d250, thunk 0x00533882
+;   Ordinal_116                       ; NONAME ordinal 116, IAT 0x0054d254, thunk 0x0053387c
+;   Ordinal_401                       ; NONAME ordinal 401, IAT 0x0054d258, thunk 0x00533864
+;   Ordinal_101                       ; NONAME ordinal 101, IAT 0x0054d25c, thunk 0x00533870
+;   Ordinal_102                       ; NONAME ordinal 102, IAT 0x0054d260, thunk 0x0053386a
+;   Ordinal_253                       ; NONAME ordinal 253, IAT 0x0054d264, thunk 0x005338d6
+;   Ordinal_403                       ; NONAME ordinal 403, IAT 0x0054d268, thunk 0x0053385e
+;   Ordinal_104                       ; NONAME ordinal 104, IAT 0x0054d26c, thunk 0x005338a0
+;   Ordinal_113                       ; NONAME ordinal 113, IAT 0x0054d270, thunk 0x005338a6
+;   Ordinal_265                       ; NONAME ordinal 265, IAT 0x0054d274, thunk 0x005338e2
+
+; ---- WINMM.dll (3) ----
+;   timeGetTime                       ; timeGetTime, IAT 0x0054d33c
+;   timeSetEvent                      ; timeSetEvent, IAT 0x0054d340
+;   timeKillEvent                     ; timeKillEvent, IAT 0x0054d344
+

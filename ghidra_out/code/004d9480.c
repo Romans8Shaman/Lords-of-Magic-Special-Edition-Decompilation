@@ -1,0 +1,98 @@
+
+void __cdecl op_drawobject(void *vm)
+
+{
+  void *this;
+  int iVar1;
+  int *piVar2;
+  void *this_00;
+  uint uStack_1c;
+  uint uStack_18;
+  uint uStack_14;
+  float fStack_10;
+  float fStack_c;
+  uint uStack_8;
+  undefined4 uStack_4;
+  
+  this = vm;
+  if (*(int *)((int)vm + 0x54) < *(int *)((int)vm + 0x58)) {
+    iVar1 = *(int *)((int)vm + 0x54) + 1;
+    *(int *)((int)vm + 0x54) = iVar1;
+    uStack_8 = *(uint *)(*(int *)((int)vm + 0x50) + -8 + iVar1 * 8);
+    uStack_4 = *(undefined4 *)(*(int *)((int)vm + 0x50) + -4 + iVar1 * 8);
+  }
+  else {
+    FUN_00404ab0(vm,6);
+    uStack_8 = 0;
+  }
+  iVar1 = FUN_004026a0(&uStack_8,&uStack_18,(uint *)&fStack_c,&fStack_10);
+  if (iVar1 != 0) {
+    if (*(int *)((int)this + 0x54) < *(int *)((int)this + 0x58)) {
+      iVar1 = *(int *)((int)this + 0x54) + 1;
+      *(int *)((int)this + 0x54) = iVar1;
+      uStack_8 = *(uint *)(*(int *)((int)this + 0x50) + -8 + iVar1 * 8);
+      uStack_4 = *(undefined4 *)(*(int *)((int)this + 0x50) + -4 + iVar1 * 8);
+    }
+    else {
+      FUN_00404ab0(this,6);
+      uStack_8 = 0;
+    }
+    iVar1 = FUN_004026a0(&uStack_8,&uStack_14,(uint *)&fStack_10,&fStack_c);
+    if (iVar1 != 0) {
+      if (*(int *)((int)this + 0x54) < *(int *)((int)this + 0x58)) {
+        iVar1 = *(int *)((int)this + 0x54) + 1;
+        *(int *)((int)this + 0x54) = iVar1;
+        uStack_8 = *(uint *)(*(int *)((int)this + 0x50) + -8 + iVar1 * 8);
+        uStack_4 = *(undefined4 *)(*(int *)((int)this + 0x50) + -4 + iVar1 * 8);
+      }
+      else {
+        *(undefined4 *)((int)this + 0x90) = 6;
+        FUN_004d4550(this);
+        *(undefined4 *)((int)this + 0x90) = 0;
+        *(undefined4 *)((int)this + 0xa4) = 0;
+        uStack_8 = 0;
+      }
+      iVar1 = FUN_004026a0(&uStack_8,&uStack_1c,(uint *)&fStack_10,&fStack_c);
+      if (iVar1 != 0) {
+        if (*(int *)((int)this + 0x54) < *(int *)((int)this + 0x58)) {
+          iVar1 = *(int *)((int)this + 0x54) + 1;
+          *(int *)((int)this + 0x54) = iVar1;
+          uStack_8 = *(uint *)(*(int *)((int)this + 0x50) + -8 + iVar1 * 8);
+          uStack_4 = *(undefined4 *)(*(int *)((int)this + 0x50) + -4 + iVar1 * 8);
+        }
+        else {
+          *(undefined4 *)((int)this + 0x90) = 6;
+          FUN_004d4550(this);
+          *(undefined4 *)((int)this + 0x90) = 0;
+          *(undefined4 *)((int)this + 0xa4) = 0;
+          uStack_8 = 0;
+        }
+        iVar1 = FUN_004026a0(&uStack_8,(uint *)&vm,(uint *)&fStack_10,&fStack_c);
+        if (iVar1 != 0) {
+          piVar2 = (int *)FUN_00491ec0(&DAT_005a7b50,(int)vm);
+          if (piVar2 == (int *)0x0) {
+            FUN_004d41c0(this,s_no_page_0057260c);
+            return;
+          }
+          this_00 = (void *)FUN_00491c20(&DAT_005a7b50,uStack_1c);
+          if (this_00 == (void *)0x0) {
+            FUN_004d41c0(this,s_no_object_0055c598);
+            return;
+          }
+          iVar1 = FUN_004935c0(this_00,piVar2,uStack_14,uStack_18,-1,1);
+          if (iVar1 == 0) {
+            FUN_004d41c0(this,s_object_can_t_be_drawn_00572614);
+          }
+          return;
+        }
+      }
+    }
+  }
+  *(undefined4 *)((int)this + 0x90) = 0xe;
+  FUN_004d4550(this);
+  *(undefined4 *)((int)this + 0x90) = 0;
+  *(undefined4 *)((int)this + 0xa4) = 0;
+  return;
+}
+
+
