@@ -23,6 +23,11 @@ void __fastcall rb_004cd7f0(void *param_1)
   typedef undefined4 _t_local_8;
 #define local_8 (*(_t_local_8 *)(_fr + 0x0))
   uint *local_4;
+
+  /* else path of a VM pop leaves this register-held local uninitialized
+   * (vanilla leftover). clang -O2 can substitute a callee return or drop
+   * later uses. Zero it so the leftover path is defined. */
+  local_4 = (uint *)0;
   
   if (*(int *)((int)param_1 + 0x54) < *(int *)((int)param_1 + 0x58)) {
     iVar1 = *(int *)((int)param_1 + 0x54) + 1;

@@ -5,7 +5,7 @@
 #define DAT_0054e640 (*(undefined *)0x0054e640)
 #define FUN_004756f0 ((undefined4 (__cdecl *)(int, ...))0x004756f0)
 #define FUN_004b69a0 ((undefined4 (__stdcall *)(undefined4, undefined4, undefined4))0x004b69a0)
-#define Ordinal_1 ((undefined4 (__stdcall *)(undefined4, undefined4, undefined4))0x00533858) /* thunk -> DSOUND.DLL!Ordinal_1 */
+#define Ordinal_1 ((undefined4 (__stdcall *)(undefined4, undefined4, undefined4))0x00533852) /* thunk -> DPLAYX.DLL!Ordinal_1 (DirectPlayCreate); was wrongly DSOUND 00533858 */
 #define OutputDebugStringA (*(__typeof__(void (__stdcall *)(LPCSTR)) *)0x0054d0f8) /* KERNEL32.DLL!OutputDebugStringA via IAT */
 #define s_DirectPlayCreate_provider_guid_p_00556d98 (*(char (*)[])0x00556d98)
 #define s_SelectProvider_called_with_lpDir_00556de0 (*(char (*)[])0x00556de0)

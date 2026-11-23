@@ -27,6 +27,11 @@ void __cdecl rb_0050d2a0(void *param_1)
 #define local_28 (*(_t_local_28 *)(_fr + 0x18))
 #define local_24 (*(_t_local_24 *)(_fr + 0x1c))
 
+  /* else path of the VM pop leaves local_40 uninitialized (vanilla leftover).
+   * clang -O2 can use a garbage value for local_24 = local_40.
+   * Zero it so that store is defined. */
+  local_40 = 0;
+
   FUN_0050cdf0(local_3c);
   if (*(int *)((int)param_1 + 0x54) < *(int *)((int)param_1 + 0x58)) {
     iVar1 = *(int *)((int)param_1 + 0x54) + 1;

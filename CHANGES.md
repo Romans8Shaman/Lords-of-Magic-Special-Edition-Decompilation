@@ -2,6 +2,74 @@
 
 Lords of Magic Special Edition 3.01 (`lomse.exe`, md5 `92a0d830e54a9d2934bb3e9b71dcad80`) rebuilt from source.
 
+## v1.01 — Script Engine and Multiplayer Fixes
+
+Official image: standalone `lomse_sa.exe` 1.01, md5 `4a65e1b2d31caacf8cf14ab1682a19af`,
+SHA256 `8d8b8cb2980be2085767b31334462ca3cf228661b5fc10a2de37055da64f9ceb`
+(3256832 bytes). Hookset `hookset_r149.txt` (unchanged from 1.0). Official
+compiler: llvm-mingw 20261104 (msvcrt, clang 23.1.5). No new PE imports.
+The sidecar `lomse_sa.exe.manifest` is unchanged from 1.0.
+
+### Bug fixes versus v1.0
+
+This 1.01 image includes 23 decompiled-C bug fixes versus the v1.0
+`lomse_sa.exe` (SHA256
+`73d0e0ad50dc3a55e6558c57a8a128713db0fbb2c906909a872d065360edf893`).
+Each was confirmed against the vanilla 3.01 `lomse.exe` (md5
+`92a0d830e54a9d2934bb3e9b71dcad80`).
+
+**Script-engine uninitialized stack (22 functions).** When a script tried
+to read a value from an empty operand stack, the rebuilt code used leftover
+garbage, or a previous function's return value, instead of a defined
+result. That leftover could feed a bad type or value into a script, or
+drop a later use of the value. The rebuilt functions now treat an empty
+stack as zero, which is a stable, defined value.
+
+The five the compiler flagged as sometimes-uninitialized:
+
+- `004bf800` — an empty VM pop left `local_4` undefined; the compiled
+  code could store a callee's return into an out-parameter.
+- `004bf9b0` — an empty VM pop left `uStack_4` undefined; the compiled
+  code could write a leftover register into a global.
+- `004d3e20` — an empty VM pop left `local_4` undefined; the compiled
+  code could store a callee's return into a VM slot.
+- `0050d2a0` — an empty VM pop left `local_40` undefined; the compiled
+  code could copy that garbage into `local_24`.
+- `0051d200` — same class as `004bf800`: an empty VM pop left `local_4`
+  undefined, so a callee's return could be stored into an out-parameter.
+
+The seventeen of the same class, each zero-initialized on the empty-stack
+path so later uses are defined:
+
+- `00410760`
+- `004895d0`
+- `004ab290`
+- `004b0ff0`
+- `004cc430`
+- `004cc2a0`
+- `004cc140`
+- `004cd700`
+- `004cd7f0`
+- `004d1720`
+- `004d7140`
+- `004da690`
+- `004da840`
+- `004e54f0`
+- `004eeea0`
+- `004f01b0`
+- `00505d80`
+
+**Multiplayer provider setup (`0044abc0`).** `SelectProvider` called
+`DirectSoundCreate` (the sound system, `DSOUND.DLL` ordinal 1 at
+`00533858`) instead of `DirectPlayCreate` (the networking system,
+`DPLAYX.DLL` ordinal 1 at `00533852`). The decompiler mixed up two
+Windows imports that were both labeled `Ordinal_1`. Multiplayer provider
+setup would fail or hit the sound API. The thunk now points at
+`DirectPlayCreate`.
+
+`python3 tools/equiv_suite.py` and a 33-function regression smoke test
+both PASS on this 1.01 image.
+
 ## v1.0 — First Public Release
 
 Official images: standalone `lomse_sa.exe` 1.0, md5 `317aee03b0dcce517dfde70ffa773b1c`,

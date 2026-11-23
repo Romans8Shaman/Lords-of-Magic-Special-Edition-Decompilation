@@ -16,6 +16,11 @@ void __fastcall rb_004cd700(void *param_1)
   char cVar4;
   char cVar5;
   uint local_4;
+
+  /* else path of a VM pop leaves this register-held local uninitialized
+   * (vanilla leftover). clang -O2 can substitute a callee return or drop
+   * later uses. Zero it so the leftover path is defined. */
+  local_4 = 0;
   
   if (*(int *)((int)param_1 + 0x54) < *(int *)((int)param_1 + 0x58)) {
     iVar2 = *(int *)((int)param_1 + 0x54) + 1;

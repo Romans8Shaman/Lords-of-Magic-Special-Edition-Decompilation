@@ -20,6 +20,11 @@ void __cdecl rb_004cc2a0(void *vm)
   int iVar5;
   size_t _Count;
   char *pcStack_4;
+
+  /* else path of a VM pop leaves this register-held local uninitialized
+   * (vanilla leftover). clang -O2 can substitute a callee return or drop
+   * later uses. Zero it so the leftover path is defined. */
+  pcStack_4 = (char *)0;
   
   this = vm;
   if (*(int *)((int)vm + 0x54) < *(int *)((int)vm + 0x58)) {

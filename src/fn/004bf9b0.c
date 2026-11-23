@@ -18,6 +18,12 @@ void __cdecl rb_004bf9b0(void *vm)
   int iVar1;
   uint uVar2;
   undefined4 uStack_4;
+
+  /* else path of the VM pop leaves uStack_4 uninitialized (vanilla leftover
+   * stack slot). clang -O2 then stores leftover EDI into DAT_0058448c.
+   * Zero it so the global write is defined. */
+  uVar2 = 0;
+  uStack_4 = 0;
   
   if (*(int *)((int)vm + 0x54) < *(int *)((int)vm + 0x58)) {
     iVar1 = *(int *)((int)vm + 0x54) + 1;

@@ -24,6 +24,11 @@ void __cdecl rb_004f01b0(void *param_1)
   uchar _fr[0xd0] __attribute__((aligned(8))); /* stack frame: locals at Ghidra offsets */
   typedef uint _t_local_c8;
   undefined4 local_c4;
+
+  /* else path of a VM pop leaves this register-held local uninitialized
+   * (vanilla leftover). clang -O2 can substitute a callee return or drop
+   * later uses. Zero it so the leftover path is defined. */
+  local_c4 = 0;
   typedef undefined4 _t_local_c0;
   typedef undefined4 _t_local_bc;
   typedef uint _t_local_b8;

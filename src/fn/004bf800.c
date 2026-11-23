@@ -17,6 +17,12 @@ undefined4 __thiscall rb_004bf800(void *this,uint *param_1,undefined4 param_2)
   int iVar4;
   uint uVar5;
   uint local_4;
+
+  /* else path of the VM pop leaves local_4 uninitialized (vanilla leftover
+   * stack slot). clang -O2 then stores the return of 004d4550 into param_1[1].
+   * Zero it so the out-param is defined and the store is always emitted. */
+  uVar5 = 0;
+  local_4 = 0;
   
   pvVar3 = DAT_005a7b78;
   if (*(int *)((int)DAT_005a7b78 + 0x54) == 0) {

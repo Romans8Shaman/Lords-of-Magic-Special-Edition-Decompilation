@@ -31,6 +31,11 @@ void __cdecl rb_004da840(void *vm)
 #define uStack_c (*(_t_uStack_c *)(_fr + 0xc))
 #define uStack_8 (*(_t_uStack_8 *)(_fr + 0x10))
   LPCSTR pCStack_4;
+
+  /* else path of a VM pop leaves this register-held local uninitialized
+   * (vanilla leftover). clang -O2 can substitute a callee return or drop
+   * later uses. Zero it so the leftover path is defined. */
+  pCStack_4 = (LPCSTR)0;
   
   if (*(int *)((int)vm + 0x54) < *(int *)((int)vm + 0x58)) {
     iVar1 = *(int *)((int)vm + 0x54) + 1;

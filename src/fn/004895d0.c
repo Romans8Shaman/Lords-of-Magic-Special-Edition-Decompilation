@@ -19,6 +19,11 @@ void __cdecl rb_004895d0(void *vm)
   typedef uint _t_uStack_8;
 #define uStack_8 (*(_t_uStack_8 *)(_fr + 0x0))
   int *piStack_4;
+
+  /* else path of a VM pop leaves this register-held local uninitialized
+   * (vanilla leftover). clang -O2 can substitute a callee return or drop
+   * later uses. Zero it so the leftover path is defined. */
+  piStack_4 = (int *)0;
   
   if (*(int *)((int)vm + 0x54) < *(int *)((int)vm + 0x58)) {
     iVar1 = *(int *)((int)vm + 0x54) + 1;

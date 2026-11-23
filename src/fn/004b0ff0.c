@@ -18,6 +18,11 @@ void __cdecl rb_004b0ff0(void *vm)
   int iVar2;
   int iVar3;
   undefined4 uStack_34;
+
+  /* else path of a VM pop leaves this register-held local uninitialized
+   * (vanilla leftover). clang -O2 can substitute a callee return or drop
+   * later uses. Zero it so the leftover path is defined. */
+  uStack_34 = 0;
   uchar _fr[0x38] __attribute__((aligned(8))); /* stack frame: locals at Ghidra offsets */
   typedef undefined4 _t_uStack_30;
   typedef undefined4 _t_uStack_2c;

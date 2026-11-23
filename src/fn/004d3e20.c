@@ -12,6 +12,12 @@ void __fastcall rb_004d3e20(void *param_1)
   int iVar1;
   uint uVar2;
   undefined4 local_4;
+
+  /* else path of the VM pop leaves local_4 uninitialized (vanilla leftover
+   * stack slot). clang -O2 can store a callee return into param_1+0xa64.
+   * Zero it so the VM slot write is defined. */
+  uVar2 = 0;
+  local_4 = 0;
   
   if (*(int *)((int)param_1 + 0x54) < *(int *)((int)param_1 + 0x58)) {
     iVar1 = *(int *)((int)param_1 + 0x54) + 1;
