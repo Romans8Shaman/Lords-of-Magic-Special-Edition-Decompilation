@@ -9,12 +9,18 @@ original, proven one function at a time, then a standalone relink.
 data/header emitters: `tools/gen_rsrc.py`, `tools/gen_data.py`, `tools/gen_pe.py`.
 Never write into vanilla `game/LoM`.
 
-**Current release:** v1.01. It is built on the v1.0 complete decompile
-and adds 23 bug fixes versus that release: 22 script-engine cases where
+**Current release:** v1.01a. It is built on the v1.01 release and adds
+one bug fix versus that image: numbers printed with the `%g` format had
+their decimal point shifted one place to the left (for example, 56
+showed as "5.6" and 4675 showed as "467.5"). The fix is in `0053ca20`.
+The bug was found during full automated testing of all 192 spells and
+unit abilities against the original game. See `CHANGES.md` for the
+function-level notes.
+
+v1.01 added 23 bug fixes versus v1.0: 22 script-engine cases where
 an empty stack read leftover garbage instead of zero, and one multiplayer
 setup bug where `SelectProvider` (`0044abc0`) called the sound API
 (`DirectSoundCreate`) instead of the networking API (`DirectPlayCreate`).
-See `CHANGES.md` for the function-level notes.
 
 v1.0 was the first public release. It is a complete
 decompile of Lords of Magic Special Edition 3.01, rebuilt so a standalone
@@ -67,14 +73,14 @@ or `./build.sh hookset_r149.txt build/release`. Install the resulting `lomse_sa.
 `smackw32.dll` only into `game/LoM_rb` and `game/LoM_rb2`. The harness also needs
 `smackw32_orig.dll` (vanilla) in the same English directory.
 
-Rebuild flags used for the official 1.01 / hookset_r149 images include
+Rebuild flags used for the official 1.01a / hookset_r149 images include
 `-Wl,--no-insert-timestamp` and `-Wl,--build-id=none` on the rb_part and harness links.
-The shipped Ready to Play `lomse_sa.exe` is md5 `4a65e1b2d31caacf8cf14ab1682a19af`,
-SHA256 `8d8b8cb2980be2085767b31334462ca3cf228661b5fc10a2de37055da64f9ceb`.
+The shipped Ready to Play `lomse_sa.exe` is md5 `16fb2cfc97c740ff8c2779ceece9dfd2`,
+SHA256 `e1ce821d19a72e5da6eda5145cb25807e4b41ad360d028ac0694d3fb2355c95e`.
 
-This 1.01 image includes 23 decompiled-C bug fixes versus the v1.0
+This 1.01a image includes one decompiled-C bug fix versus the v1.01
 `lomse_sa.exe` (SHA256
-`73d0e0ad50dc3a55e6558c57a8a128713db0fbb2c906909a872d065360edf893`). See
+`8d8b8cb2980be2085767b31334462ca3cf228661b5fc10a2de37055da64f9ceb`). See
 `CHANGES.md` for the function-level notes.
 
 ## Pipeline (lower-level)

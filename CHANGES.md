@@ -2,6 +2,42 @@
 
 Lords of Magic Special Edition 3.01 (`lomse.exe`, md5 `92a0d830e54a9d2934bb3e9b71dcad80`) rebuilt from source.
 
+## v1.01a — Number Formatting Bug Fix
+
+Official image: standalone `lomse_sa.exe` 1.01a, md5 `16fb2cfc97c740ff8c2779ceece9dfd2`,
+SHA256 `e1ce821d19a72e5da6eda5145cb25807e4b41ad360d028ac0694d3fb2355c95e`
+(3256832 bytes). Hookset `hookset_r149.txt` (unchanged from 1.01). Official
+compiler: llvm-mingw 20261104 (msvcrt, clang 23.1.5). No new PE imports.
+The sidecar `lomse_sa.exe.manifest` is unchanged from 1.0.
+
+### Bug fixes versus v1.01
+
+This 1.01a image includes one decompiled-C bug fix versus the v1.01
+`lomse_sa.exe` (SHA256
+`8d8b8cb2980be2085767b31334462ca3cf228661b5fc10a2de37055da64f9ceb`).
+It was confirmed against the vanilla 3.01 `lomse.exe` (md5
+`92a0d830e54a9d2934bb3e9b71dcad80`).
+
+**Number formatting (`0053ca20`).** Numbers printed with the `%g` format
+had their decimal point shifted one place to the left. For example, a
+gold value of 56 showed as "5.6", 56.5 showed as "5.65", and an
+experience value of 4675 showed as "467.5". The underlying values were
+correct; only the on-screen text was wrong. This affected any game text
+built with `%g` from fixed-point or floating-point values.
+
+The rebuilt function wrote `decpt-1` back into the STRFLT record before
+the follow-on formatter used it. In the original game, that `decpt-1`
+value stays in a register and is not written back. The source now keeps
+the original register behavior, so printed numbers match the original
+game.
+
+This bug was found and verified during full automated testing of all 192
+spells and unit abilities against the original game. After the fix,
+those tests, plus follow-up checks of stances in live battles, spells at
+higher caster levels, previously stalled spells, and adventure-map
+effects, matched the original game. No other rebuild bugs were found in
+that sweep.
+
 ## v1.01 — Script Engine and Multiplayer Fixes
 
 Official image: standalone `lomse_sa.exe` 1.01, md5 `4a65e1b2d31caacf8cf14ab1682a19af`,

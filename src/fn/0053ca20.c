@@ -12,6 +12,7 @@ void __cdecl rb_0053ca20(uint *param_1,char *param_2,uint param_3,int param_4)
 
 {
   int iVar1;
+  int iVar2;
   char cVar2;
   char *pcVar3;
   uchar _fr[0x30] __attribute__((aligned(8))); /* stack frame: locals at Ghidra offsets */
@@ -26,12 +27,14 @@ void __cdecl rb_0053ca20(uint *param_1,char *param_2,uint param_3,int param_4)
   iVar1 = local_24 + -1;
   pcVar3 = param_2 + (local_28 == 0x2d);
   FUN_00544120(pcVar3,param_3,(int)&local_28);
-  local_24 = local_24 + -1;
-  if ((local_24 < -4) || ((int)param_3 <= local_24)) {
+  /* FIX (spelltest 2026-11-25): the original keeps decpt-1 in a register (53ca76 lea eax,[ecx-1]) and
+   * does not write it back to the STRFLT; writing it back shifted %g's decimal point (56 -> "5.6"). */
+  iVar2 = local_24 + -1;
+  if ((iVar2 < -4) || ((int)param_3 <= iVar2)) {
     FUN_0053c7f0(param_2,param_3,param_4,&local_28,'\x01');
     return;
   }
-  if (iVar1 < local_24) {
+  if (iVar1 < iVar2) {
     cVar2 = *pcVar3;
     while (cVar2 != '\0') {
       cVar2 = pcVar3[1];
