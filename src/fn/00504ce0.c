@@ -1,11 +1,12 @@
 /* Rebuilt from lomse.exe FUN_00504ce0 @ 0x00504ce0 (505 bytes, __thiscall).
+ * FIX v1.01b: debug grid (DAT_00586798) cell colour is 100 for the centre cell else 0xff (vanilla push 0x64/0xff); was a 0 pad.
  * Source: Ghidra 12.2 decompilation, cleaned by tools/gen.py. Behaviour-match target, not byte-match. */
 #include "lom.h"
 
 #define DAT_00583648 (*(int *)0x00583648)
 #define DAT_00586798 (*(int *)0x00586798)
 #define DAT_005ae958 (*(undefined *)0x005ae958)
-#define FUN_00454200(...) ((undefined4 (__thiscall *)(void *, undefined4, undefined4, undefined4))0x00454200)(__VA_ARGS__, 0) /* +1 unused stack dword(s): ret 12 */
+#define FUN_00454200 ((undefined4 (__thiscall *)(void *, undefined4, undefined4, undefined4))0x00454200) /* ret 12: (x, y, colour) */
 #define FUN_0046a050 ((undefined4 (__fastcall *)(int, undefined4, undefined4))0x0046a050)
 #define FUN_004753d0 ((undefined4 (__fastcall *)(int))0x004753d0)
 #define FUN_004950c0 ((undefined4 * (__thiscall *)(void *, int *))0x004950c0)
@@ -115,7 +116,8 @@ switchD_00504d40_caseD_1:
         unused_stack_8 = 0;
         if (0 < iVar1) {
           do {
-            FUN_00454200(&DAT_005ae958,unused_stack_8,iVar2);
+            FUN_00454200(&DAT_005ae958,unused_stack_8,iVar2,
+                         (unused_stack_8 == (*(int *)((int)this + 0x29ecc) >> 1) && iVar2 == (*(int *)((int)this + 0x29ed0) >> 1)) ? 100 : 0xff); /* v1.01b: vanilla colour, was 0 */
             iVar1 = *(int *)((int)this + 0x29ecc);
             unused_stack_8 = unused_stack_8 + 1;
           } while (unused_stack_8 < iVar1);

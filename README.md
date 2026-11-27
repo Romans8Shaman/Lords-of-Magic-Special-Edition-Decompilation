@@ -9,13 +9,18 @@ original, proven one function at a time, then a standalone relink.
 data/header emitters: `tools/gen_rsrc.py`, `tools/gen_data.py`, `tools/gen_pe.py`.
 Never write into vanilla `game/LoM`.
 
-**Current release:** v1.01a. It is built on the v1.01 release and adds
-one bug fix versus that image: numbers printed with the `%g` format had
-their decimal point shifted one place to the left (for example, 56
-showed as "5.6" and 4675 showed as "467.5"). The fix is in `0053ca20`.
-The bug was found during full automated testing of all 192 spells and
-unit abilities against the original game. See `CHANGES.md` for the
-function-level notes.
+**Current release:** v1.01b. It is built on the v1.01a release and adds
+five bug fixes versus that image. The visible one is a missing fortress
+gate sprite during sieges (`00411ba0`). The others are a low-memory
+warning that printed "(null)" (`00505d80`), wrong arguments on the
+ambient-sound script command (`0047aa20`), a wrong debug-grid colour
+(`00504ce0`), and a sound-buffer counter that subtracted the wrong
+field (`00478f60`, no gameplay effect). See `CHANGES.md` and
+`RELEASE_NOTES_v1.01b.md` for the function-level notes.
+
+v1.01a fixed number formatting (`0053ca20`): values printed with `%g`
+had their decimal point shifted one place to the left (for example, 56
+showed as "5.6" and 4675 showed as "467.5").
 
 v1.01 added 23 bug fixes versus v1.0: 22 script-engine cases where
 an empty stack read leftover garbage instead of zero, and one multiplayer
@@ -73,14 +78,14 @@ or `./build.sh hookset_r149.txt build/release`. Install the resulting `lomse_sa.
 `smackw32.dll` only into `game/LoM_rb` and `game/LoM_rb2`. The harness also needs
 `smackw32_orig.dll` (vanilla) in the same English directory.
 
-Rebuild flags used for the official 1.01a / hookset_r149 images include
+Rebuild flags used for the official 1.01b / hookset_r149 images include
 `-Wl,--no-insert-timestamp` and `-Wl,--build-id=none` on the rb_part and harness links.
-The shipped Ready to Play `lomse_sa.exe` is md5 `16fb2cfc97c740ff8c2779ceece9dfd2`,
-SHA256 `e1ce821d19a72e5da6eda5145cb25807e4b41ad360d028ac0694d3fb2355c95e`.
+The shipped Ready to Play `lomse_sa.exe` is md5 `80f221fb6915f4f8af198b852e5d52ef`,
+SHA256 `662e5a7e4299d60a1a89b19a17f6885bd82971c09f2e419a3244bd9f475ef454`.
 
-This 1.01a image includes one decompiled-C bug fix versus the v1.01
+This 1.01b image includes five decompiled-C bug fixes versus the v1.01a
 `lomse_sa.exe` (SHA256
-`8d8b8cb2980be2085767b31334462ca3cf228661b5fc10a2de37055da64f9ceb`). See
+`e1ce821d19a72e5da6eda5145cb25807e4b41ad360d028ac0694d3fb2355c95e`). See
 `CHANGES.md` for the function-level notes.
 
 ## Pipeline (lower-level)

@@ -1,4 +1,5 @@
 /* Rebuilt from lomse.exe FUN_00411ba0 @ 0x00411ba0 (1256 bytes, __thiscall).
+ * FIX v1.01b: +0x6c/+0x70 follower/gate-part offsets are float fields (vanilla fstp); Ghidra '(int)(float)x' is a bitcast.
  * Source: Ghidra 12.2 decompilation, cleaned by tools/gen.py. Behaviour-match target, not byte-match. */
 #include "lom.h"
 
@@ -227,8 +228,8 @@ void __thiscall rb_00411ba0(void *this, int **volatile param_1)
       apiStack_3c[0][0x13] = iVar2;
       apiStack_3c[0][0x19] = 0;
       apiStack_3c[0][0x1a] = 0;
-      apiStack_3c[0][0x1b] = (int)(float)(int)param_1;
-      apiStack_3c[0][0x1c] = (int)(float)iStack_40;
+      apiStack_3c[0][0x1b] = __BC(int, (float)(int)param_1); /* v1.01b: float field (vanilla fild/fstp), was value-converted */
+      apiStack_3c[0][0x1c] = __BC(int, (float)iStack_40); /* v1.01b: float field (vanilla fild/fstp), was value-converted */
       apiStack_3c[0][0xc] = apiStack_3c[0][0xc] | 0x10;
       ((undefined4 (__thiscall *)(__typeof__(apiStack_3c[0])))(**(code **)(*apiStack_3c[0] + 0x2c)))(apiStack_3c[0]);
       FUN_00455290(&DAT_005ae8e8,2,apiStack_3c[0][10]);
@@ -239,8 +240,8 @@ void __thiscall rb_00411ba0(void *this, int **volatile param_1)
       apiStack_3c[1][0x13] = iVar2;
       apiStack_3c[1][0x19] = 0;
       apiStack_3c[1][0x1a] = 0;
-      apiStack_3c[1][0x1b] = (int)(float)(int)param_1;
-      apiStack_3c[1][0x1c] = (int)(float)iStack_40;
+      apiStack_3c[1][0x1b] = __BC(int, (float)(int)param_1); /* v1.01b: float field (vanilla fild/fstp), was value-converted */
+      apiStack_3c[1][0x1c] = __BC(int, (float)iStack_40); /* v1.01b: float field (vanilla fild/fstp), was value-converted */
       apiStack_3c[1][0xc] = apiStack_3c[1][0xc] | 0x10;
       ((undefined4 (__thiscall *)(__typeof__(apiStack_3c[1])))(**(code **)(*apiStack_3c[1] + 0x2c)))(apiStack_3c[1]);
       FUN_00455290(&DAT_005ae8e8,1,apiStack_3c[1][10]);
@@ -273,9 +274,9 @@ void __thiscall rb_00411ba0(void *this, int **volatile param_1)
             }
             else {
               fVar11 = (float10)fcos(fVar10 + (float10)*pfVar6);
-              this_00[0x1b] = (int)(float)(fVar11 * (float10)pfVar6[1]);
+              this_00[0x1b] = __BC(int, (float)(fVar11 * (float10)pfVar6[1])); /* v1.01b: float field (vanilla fild/fstp), was value-converted */
               fVar10 = (float10)fsin(fVar10 + (float10)*pfVar6);
-              this_00[0x1c] = (int)(float)(fVar10 * (float10)pfVar6[1]);
+              this_00[0x1c] = __BC(int, (float)(fVar10 * (float10)pfVar6[1])); /* v1.01b: float field (vanilla fild/fstp), was value-converted */
             }
             ((undefined4 (__thiscall *)(__typeof__(this_00)))(**(code **)(*this_00 + 0x2c)))(this_00);
             iVar7 = iVar7 + 1;

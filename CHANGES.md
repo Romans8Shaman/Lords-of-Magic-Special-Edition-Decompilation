@@ -2,6 +2,61 @@
 
 Lords of Magic Special Edition 3.01 (`lomse.exe`, md5 `92a0d830e54a9d2934bb3e9b71dcad80`) rebuilt from source.
 
+## v1.01b — Fortress Gate and Sound Fixes
+
+Official image: standalone `lomse_sa.exe` 1.01b, md5 `80f221fb6915f4f8af198b852e5d52ef`,
+SHA256 `662e5a7e4299d60a1a89b19a17f6885bd82971c09f2e419a3244bd9f475ef454`
+(3256320 bytes). Hookset `hookset_r149.txt` (unchanged from 1.01). Official
+compiler: llvm-mingw 20261104 (msvcrt, clang 23.1.5). No new PE imports.
+The sidecar `lomse_sa.exe.manifest` is unchanged from 1.0.
+
+### Bug fixes versus v1.01a
+
+This 1.01b image includes five decompiled-C bug fixes versus the v1.01a
+`lomse_sa.exe` (SHA256
+`e1ce821d19a72e5da6eda5145cb25807e4b41ad360d028ac0694d3fb2355c95e`).
+Each was confirmed against the vanilla 3.01 `lomse.exe` (md5
+`92a0d830e54a9d2934bb3e9b71dcad80`).
+
+**Missing fortress gate sprite (`00411ba0`).** During a live siege, the
+fortress gate unit was present (it had hit points and a map position)
+but was not drawn, so the gate appeared to be missing. The rebuilt
+function stored a converted integer where the original game stores the
+raw floating-point bits used as coordinates. Those six stores now keep
+the original bit pattern, and the gate sprite draws as it does in the
+original game.
+
+**Low-memory warning text (`00505d80`).** The low-memory warning dialog
+printed "(null)" in place of the expected wording, for example
+"WARNING! Your system has only 86 (null)". A placeholder 0 was passed
+instead of the string id. The dialog now shows the original wording,
+including "megabytes of available space."
+
+**Ambient sound arguments (`0047aa20`).** The rebuilt ambient-sound
+script command dropped the first argument and converted a raw integer
+as if it were a float. Both arguments are now popped and converted the
+way the original game does, then passed in the original order.
+
+**Debug grid colour (`00504ce0`).** The debug grid was drawn with a
+placeholder colour of 0. The original values are restored: 100 for the
+centre cell and 0xff otherwise. This only affects debug drawing.
+
+**Sound-buffer size counter (`00478f60`).** A sound-memory counter
+subtracted the DirectSound caps `dwSize` field instead of
+`dwBufferBytes`. The counter is not used for gameplay, so this had no
+visible effect, but the subtraction now matches the original game.
+
+### Testing notes
+
+All 102 functions captured in a live soak were replayed against the
+original game (52 matched in full, 50 stopped early without a mismatch).
+Those 50 were then checked by hand against the original disassembly: 47
+were identical, and 2 were harmless differences (an optional RGB565
+display mode in `004750b0`, and a different add order in a dot product
+in `00519b30`). Gate and wall damage during a siege was not exercised
+in testing; the gate stayed at full hit points in both the rebuild and
+the original game in those runs.
+
 ## v1.01a — Number Formatting Bug Fix
 
 Official image: standalone `lomse_sa.exe` 1.01a, md5 `16fb2cfc97c740ff8c2779ceece9dfd2`,

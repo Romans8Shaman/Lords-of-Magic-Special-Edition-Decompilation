@@ -18,7 +18,8 @@ void __stdcall rb_00478f60(int *param_1)
   local_14[0] = 0x14;
   iVar1 = ((undefined4 (__stdcall *)(__typeof__(param_1), __typeof__(local_14)))(**(code **)(*param_1 + 0xc)))(param_1,local_14);
   if (iVar1 == 0) {
-    DAT_005832ec = DAT_005832ec - local_14[0];
+    /* v1.01a audit fix: vanilla subtracts DSBCAPS.dwBufferBytes (caps[2]), not dwSize */
+    DAT_005832ec = DAT_005832ec - local_14[2];
     return;
   }
   OutputDebugStringA(s_GetCaps_failed__0055aff4);
